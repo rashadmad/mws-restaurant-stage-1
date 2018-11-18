@@ -155,7 +155,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 /**
  * Create restaurant HTML.
  */
-//TODO: add alt tags to these images that are descriptive
+
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
