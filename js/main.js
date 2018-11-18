@@ -155,10 +155,13 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 /**
  * Create restaurant HTML.
  */
+//TODO: add alt tags to these images that are descriptive
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
 
   const image = document.createElement('img');
+  const ALTTEXT = restaurant.name + " Restaurant";
+  image.setAttribute("alt",ALTTEXT);
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
