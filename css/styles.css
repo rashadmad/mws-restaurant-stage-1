@@ -1,4 +1,3 @@
-/*TODO: Mobile first Approach*/
 /*TODO: make all fonts either em*/
 
 @charset "utf-8";
@@ -149,37 +148,24 @@ nav h1 a {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
+	font-size: 1.6em;
   min-height: 380px;
 	padding: 10px 10px 0px 10px;
 	grid-column: span 1;
-	text-align: left;
+	text-align: center;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
 	display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (min-width: 500px) {
-	#restaurants-list {
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-		display: grid;
-	}
-	#restaurants-list div {
-		text-align: left;
-		padding-top: 10px;
-	}
+  max-width: 350px;
 }
 #restaurants-list div h1 {
   color: #f18200;
   font-family: Arial,sans-serif;
-  font-size: 14pt;
+  font-size: 1.2em;
   font-weight: 200;
   letter-spacing: 0;
-  line-height: 1.3;
-  margin: 20px 0 10px;
+  margin: 20px 0 auto 0;
   text-transform: uppercase;
 }
 #restaurants-list p {
@@ -190,13 +176,29 @@ nav h1 a {
   background-color: orange;
   border-bottom: 3px solid #eee;
   color: #fff;
-  display: inline-block;
   font-size: 10pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	white-space: nowrap;
   padding: 10px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 }
+
+@media (min-width: 600px) {
+	#restaurants-list {
+		grid-template-columns: 1fr 1fr;
+		display: grid;
+	}
+	#restaurants-list div {
+	}
+  #restaurants-list div h1{
+  }
+  #restaurants-list .restaurant-img {
+  }
+}
+
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
@@ -234,9 +236,6 @@ nav h1 a {
   line-height: 1.1;
 }
 
-#restaurant-img {
-	width: 100%;
-}
 #restaurant-address {
   font-size: 12pt;
   margin: 10px 0px;
