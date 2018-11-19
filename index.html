@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 
 <!–– RESPONSIVE:meta tags ––>
-<!–– accessibility: Alt tags ––>
-<!–– accessibility: title IFrames ––>
-<!–– accessibility: focus ––>
-<!–– accessibility: ARIA checklist ––>
 <html lang="en">
 <head>
-  <meta name= theme-color content= #3397DB>
+  <meta name= theme-color content="#3397DB">
   <meta charset="UTF-8">
   <meta name="description" content="Free Web tutorials">
   <meta name="keywords" content="HTML,CSS,XML,JavaScript">
@@ -34,11 +30,11 @@
       <div class="filter-options">
         <h2>Filter Results</h2>
         <label class="visually-hidden" for="neighborhoods">neighborhood:</label>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select id="neighborhoods-select" aria-label="neighborhood:" name="neighborhoods" onchange="updateRestaurants()">
             <option value="all">All Neighborhoods</option>
         </select>
         <label class="visually-hidden" for="cuisines">Cuisine:</label>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select id="cuisines-select" aria-label="neighborhood:" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>
