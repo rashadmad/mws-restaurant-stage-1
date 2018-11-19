@@ -36,7 +36,7 @@ a img{
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
-  margin: 0 0 20px;
+  margin: 10px;
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -145,27 +145,26 @@ nav h1 a {
   padding: 10px;
 }
 #restaurants-list div {
+  color: orange;
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
 	font-size: 1.6em;
   min-height: 380px;
 	padding: 10px 10px 0px 10px;
-	grid-column: span 1;
 	text-align: center;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
 	display: block;
-  max-width: 350px;
+  width: 100%;
 }
 #restaurants-list div h1 {
-  color: #f18200;
+
   font-family: Arial,sans-serif;
   font-size: 1.2em;
   font-weight: 200;
   letter-spacing: 0;
-  margin: 20px 0 auto 0;
   text-transform: uppercase;
 }
 #restaurants-list p {
@@ -177,9 +176,8 @@ nav h1 a {
   border-bottom: 3px solid #eee;
   color: #fff;
   font-size: 10pt;
-	margin-top: 10px;
-	margin-bottom: 10px;
 	white-space: nowrap;
+  margin: 10px;
   padding: 10px;
   text-align: center;
   text-decoration: none;
@@ -190,10 +188,12 @@ nav h1 a {
 	#restaurants-list {
 		grid-template-columns: 1fr 1fr;
 		display: grid;
+    grid-gap: 20px;
 	}
 	#restaurants-list div {
 	}
   #restaurants-list div h1{
+    font-size: 1em;
   }
   #restaurants-list .restaurant-img {
   }
