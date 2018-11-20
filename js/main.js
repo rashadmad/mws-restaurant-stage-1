@@ -80,9 +80,9 @@ initMap = () => {
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoicmFzaGFkbWFkIiwiYSI6ImNqb25hZHdwYzB0NGczcGtrbTNjYjV5bXgifQ.5Sho8TaoO1YmmYsEGtyL8g',
     maxZoom: 18,
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-      'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/" role="button" tabindex="0">OpenStreetMap</a> contributors, ' +
+      '<a href="https://creativecommons.org/licenses/by-sa/2.0/" tabindex="0" role="button">CC-BY-SA</a>, ' +
+      'Imagery © <a href="https://www.mapbox.com/" tabindex="0" role="button">Mapbox</a>',
     id: 'mapbox.streets'
   }).addTo(newMap);
 
@@ -178,10 +178,13 @@ createRestaurantHTML = (restaurant) => {
   address.innerHTML = restaurant.address;
   li.append(address);
 
-  const more = document.createElement('a');
-  more.innerHTML = 'View Details';
-  more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  const link = document.createElement('a');
+  const more = document.createElement('button');
+  more.append(link);
+  link.innerHTML = 'View Details';
+  link.href = DBHelper.urlForRestaurant(restaurant);
+
+  li.append(more);
 
   return li
 }
