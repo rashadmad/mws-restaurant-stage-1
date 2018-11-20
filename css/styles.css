@@ -104,6 +104,15 @@ nav h1 a {
     color: #0275d8;
     text-decoration: underline;
 }
+
+.hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
 /* ====================== Map ====================== */
 #map {
   height: 400px;
@@ -145,6 +154,7 @@ nav h1 a {
   padding: 10px;
 }
 #restaurants-list div {
+  display:none;
   color: #3397db;
   background-color: #fff;
   border: 2px solid #ccc;
