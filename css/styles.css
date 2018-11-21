@@ -134,6 +134,18 @@ table{
   align-items: center;
   padding: 10px;
 }
+@media only screen and (min-width: 500px) {
+	.filter-options{
+		display: block;
+	  overflow: hidden;
+	}
+	.h2-wrapper{
+		float: left;
+	}
+	.wrapper{
+			float: right;
+	}
+}
 .filter-options h2 {
   color: white;
   font-size: 1rem;
@@ -150,7 +162,7 @@ table{
   letter-spacing: 0;
   margin: 10px;
   padding: 0 10px;
-	max-width: 400px;
+	width: 95%;
 }
 
 .visually-hidden {
@@ -213,7 +225,9 @@ table{
 }
 
 @media only screen and (min-width: 500px){
-
+	.filter-options select {
+		 width: 150px;
+	}
 }
 @media only screen and (min-width: 600px){
 	#restaurants-list{
