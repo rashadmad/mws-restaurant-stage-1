@@ -209,7 +209,7 @@ th{
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 2000;
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
