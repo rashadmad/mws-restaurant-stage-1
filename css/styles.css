@@ -40,7 +40,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   width:100%;
   min-height: 100%;
 }
-#footer {
+footer {
+  bottom: 0;
   background-color: #444;
   color: #aaa;
   font-size: 8pt;
@@ -73,6 +74,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
+    drop-shadow(30px 10px 4px black);
 }
 
 /* Display list items side by side */
