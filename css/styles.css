@@ -202,7 +202,7 @@ th{
   text-align: -webkit-center;
 }
 .review-map #map{
-  margin-top: 126px;
+  margin-top: 115px;
 }
 
 .inside header {
@@ -237,6 +237,8 @@ h1{
 }
 .address-container{
   display: grid;
+	margin:0;
+	padding:0;
   grid-template-columns: auto auto;
 }
 #restaurant-name {
@@ -244,11 +246,12 @@ h1{
   color: blue;
   font-family: Arial,sans-serif;
   font-size: 1.5em;
-  font-weight: 200;
-  letter-spacing: 0;
+  font-weight: 300;
+  letter-spacing: 7px;
   text-transform: uppercase;
   line-height: 1.1;
   margin: 20px 5px 20px 5px;
+
 }
 #restaurant-img {
 	max-width: 100%;
