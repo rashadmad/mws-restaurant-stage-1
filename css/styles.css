@@ -86,6 +86,9 @@ nav h1 a {
   letter-spacing: 7px;
   text-transform: uppercase;
 }
+table{
+	width: 100%;
+}
 #breadcrumb {
     padding: 10px 40px 16px;
     list-style: none;
@@ -205,7 +208,7 @@ nav h1 a {
   text-transform: uppercase;
 }
 
-li{
+#restaurants-list li{
 	max-width: 450px;
 }
 
