@@ -188,6 +188,10 @@ nav h1 a {
 }
 
 /* ====================== Restaurant Details ====================== */
+#map{
+  margin-top: 126px;
+}
+
 .inside header {
   position: fixed;
   top: 0;
