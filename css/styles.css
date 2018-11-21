@@ -240,6 +240,7 @@ h1{
   grid-template-columns: auto auto;
 }
 #restaurant-name {
+  text-align:center;
   color: blue;
   font-family: Arial,sans-serif;
   font-size: 1.5em;
