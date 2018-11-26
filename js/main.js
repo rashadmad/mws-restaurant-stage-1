@@ -3,7 +3,7 @@ let restaurants,
   cuisines
 var newMap
 var markers = []
-//files to be added to the cache
+//  files to be added to the cache
 const cacheFiles = [
   '/',
   '/restaurant.html',
