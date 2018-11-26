@@ -3,7 +3,7 @@ let restaurants,
   cuisines
 var newMap
 var markers = []
-
+//files to be added to the cache
 const cacheFiles = [
   '/',
   '/restaurant.html',
@@ -22,7 +22,7 @@ const cacheFiles = [
   '/img/8.jpg',
   '/img/9.jpg',
 ];
-
+//register serviceWorker reports error on failure
 if('serviceWorker' in navigator) {
   navigator.serviceWorker
   .register('/sw.js')
