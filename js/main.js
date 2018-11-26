@@ -156,6 +156,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
+  const wrapper = document.createElement('div');
   const infoDiv = document.createElement('div');
   const name = document.createElement('h1');
   const more = document.createElement('a');
