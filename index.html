@@ -28,7 +28,8 @@
     </section>
     <section>
       <div class="filter-options">
-        <h2>Filter Results</h2>
+        <div class='h2-wrapper'><h2>Filter Results</h2></div>
+        <div class='wrapper'>
         <label class="visually-hidden" for="neighborhoods">neighborhood:</label>
         <select id="neighborhoods-select" aria-label="neighborhood:" name="neighborhoods" onchange="updateRestaurants()">
             <option value="all">All Neighborhoods</option>
@@ -37,6 +38,7 @@
         <select id="cuisines-select" aria-label="neighborhood:" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
+        </div>
       </div>
       <ul id="restaurants-list"></ul>
     </section>
