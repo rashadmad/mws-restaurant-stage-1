@@ -182,7 +182,7 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
  */
 
 createRestaurantHTML = (restaurant) => {
-  const NEWDIV = document.createElement('div');
+  const NEWDIV = document.createElement('li');
 
   const image = document.createElement('img');
   const ALTTEXT = restaurant.name + " Restaurant";

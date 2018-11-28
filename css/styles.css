@@ -177,8 +177,8 @@ table{
   background-color: #f3f3f3;
   padding: 10px;
 }
-#restaurants-list div {
-  color: orange;
+#restaurants-list li {
+  color: blue;
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
@@ -363,6 +363,18 @@ h1{
   color: white;
 }
 
+#restaurants-list li a {
+  background-color: blue;
+  border-bottom: 3px solid #eee;
+  color: #fff;
+  font-size: .8em;
+	white-space: nowrap;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 @media only screen and (min-width: 500px) {
 
 		#restaurants-list li {
@@ -385,10 +397,6 @@ h1{
 	}
 	#restaurants-list{
 		grid-template-columns: 1fr 1fr 1fr;
-	}
-
-	#restaurants-list li h1 {
-
 	}
 
 	#restaurants-list .restaurant-img {
