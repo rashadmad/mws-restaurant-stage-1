@@ -27,7 +27,7 @@
   <!-- End header -->
 
   <!-- Beginning main -->
-  <main id="maincontent">
+  <main id="maincontent" class="review-map">
     <!-- Beginning map -->
     <section id="map-container">
       <div id="map"></div>
@@ -38,8 +38,13 @@
       <h1 id="restaurant-name"></h1>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
+    <div class="address-container">
+      <div><h1>Address:</h1></div>
+      <div><p id="restaurant-address"></p></div>
+    </div>
+      <table border="1" id="restaurant-hours">
+          <th colspan="2">Restaurant Hours</th>
+      </table>
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
@@ -51,7 +56,7 @@
   <!-- End main -->
 
   <!-- Beginning footer -->
-  <footer id="footer">
+  <footer>
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->

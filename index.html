@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 
 <!–– RESPONSIVE:meta tags ––>
-<!–– accessibility: Alt tags ––>
-<!–– accessibility: title IFrames ––>
-<!–– accessibility: focus ––>
-<!–– accessibility: ARIA checklist ––>
-<html>
+<html lang="en">
 <head>
+  <meta name= theme-color content="#3397DB">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
@@ -17,25 +16,29 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+  <header tabindex="-1">
+    <nav tabindex="-1">
+      <h1 tabindex="-1"><a href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <main id="maincontent">
-    <section id="map-container">
-      <div id="map"></div>
+  <main tabindex="-1" id="maincontent">
+    <section tabindex="-1" id="map-container">
+      <div tabindex="-1" id="map"></div>
     </section>
     <section>
       <div class="filter-options">
-        <h2>Filter Results</h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-          <option value="all">All Neighborhoods</option>
+        <div class='h2-wrapper'><h2>Filter Results</h2></div>
+        <div class='wrapper'>
+        <label class="visually-hidden" for="neighborhoods">neighborhood:</label>
+        <select id="neighborhoods-select" aria-label="neighborhood:" name="neighborhoods" onchange="updateRestaurants()">
+            <option value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <label class="visually-hidden" for="cuisines">Cuisine:</label>
+        <select id="cuisines-select" aria-label="neighborhood:" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
+        </div>
       </div>
       <div id="restaurants-list"></div>
     </section>
@@ -46,7 +49,7 @@
   <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places&callback=initMap"></script> -->
 
 
-  <footer id="footer">
+  <footer>
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
