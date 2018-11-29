@@ -183,11 +183,13 @@ table{
   margin: 10px;
   padding: 12px;
 }
-#restaurants-list .restaurant-img {
+#restaurants-list {
   background-color: #ccc;
   display: block;
   margin: 0;
   max-width: 100%;
+}
+.restaurant-hero-img {
   height: auto;
 }
 #restaurants-list li h2 {
@@ -286,6 +288,12 @@ h1{
 	min-width: 350px;
   text-align: center;
 }
+.info{
+	height: 100px;
+}
+.restaurant-img{
+	width: 100%;
+}
 .center-content{
   display:flex;
   align-item: center;
@@ -380,11 +388,12 @@ td, th {
 
 	#restaurants-list .restaurant-img {
 		object-fit: cover;
-  	width: 320px;
   	height: 180px;
 	  background-color: #ccc;
 	  display: block;
 	  margin: 0;
+		padding: 0;
+		padding-bottom: 5px;
 	}
 	table {
 		height: 100%;
