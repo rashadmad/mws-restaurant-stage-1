@@ -426,7 +426,7 @@ td, th {
 }
 @media only screen and (min-width: 800px){
 	td, th {
-		line-height: 2;
+		line-height: 2.5;
 	}
 	#restaurants-list{
 		display: grid;
