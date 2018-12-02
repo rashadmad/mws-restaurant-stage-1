@@ -2,11 +2,18 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*colors*/
+$primary_color: blue;
+$base_color: #252831;
+$card_color: #f3f3f3;
+$base_font_color: #333;
+
+
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1em;
-	color: #333;
-	line-height: 1.5;
+	color: $base_font_color;
+	line-height: 1.2;
 }
 body {
 	background-color: #fdfdfd;
@@ -16,19 +23,19 @@ body {
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
-	color: #333;
+	color: $base_font_color;
 	overflow: auto;
 }
 a {
-	color: blue;
+	color: $primary_color;
 	text-decoration: none;
 }
 a:hover, a:focus {
-	color: blue;
+	color: $primary_color;
 	text-decoration: none;
 }
 a img{
-	border: none 0px #fff;
+	border: none 0px $card_color;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
@@ -37,14 +44,14 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	display: block;
 }
 #maincontent {
-  background-color: #f3f3f3;
+  background-color: $card_color;
   width:100%;
   min-height: 100%;
 }
 footer {
   bottom: 0;
-  background-color: #444;
-  color: #aaa;
+  background-color: $card_color;
+  color: $base_font_color;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
@@ -60,7 +67,7 @@ footer {
 nav {
   width: 100%;
   height: auto;
-  background-color: #252831;
+  background-color: $base_color;
   text-align:center;
   padding: 20px 0;
 }
@@ -104,7 +111,7 @@ table{
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
+    color: $primary_color
     text-decoration: none;
 }
 
@@ -122,7 +129,7 @@ table{
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   display: grid;
-  background-color: blue;
+  background-color: $primary_color;
   align-items: center;
   padding: 10px;
 }
@@ -193,7 +200,7 @@ table{
   height: auto;
 }
 #restaurants-list li h2 {
-	color: blue;
+	color: $primary_color;
 	font-family: Arial,sans-serif;
 	font-size: 1.3em;
 	font-weight: 200;
@@ -210,7 +217,7 @@ table{
 }
 
 #restaurants-list li a {
-  background-color: blue;
+  background-color: $primary_color;
   border-bottom: 3px solid #eee;
   color: #fff;
   display: inline-block;
@@ -222,7 +229,7 @@ table{
 
 /* ====================== Restaurant Details ====================== */
 th{
-  color: blue;
+  color: $primary_color;
   text-align: left;
   font-size: 1.6em;
   font-weight: 300;
@@ -243,7 +250,7 @@ th{
   z-index: 2000;
 }
 .inside #map-container {
-  background: blue none repeat scroll 0 0;
+  background: $primary_color none repeat scroll 0 0;
   height: auto;
   right: 0;
   top: 80px;
@@ -259,7 +266,7 @@ th{
 }
 h1{
 	text-align: center;
-  color: blue;
+  color: $primary_color;
   font-family: Arial,sans-serif;
   font-size: 1.5em;
   font-weight: 200;
@@ -273,7 +280,7 @@ h1{
 }
 #restaurant-name {
   text-align:center;
-  color: blue;
+  color: $primary_color;
   font-family: Arial,sans-serif;
   font-size: 1.5em;
   font-weight: 300;
@@ -306,7 +313,7 @@ h1{
   text-align: center;
 }
 #restaurant-cuisine {
-  background-color: #252831;
+  background-color: $base_color;
   color: #ddd;
   font-size: 12pt;
   font-weight: 300;
@@ -326,7 +333,7 @@ h1{
 	text-align: left;
 }
 #reviews-container h2 {
-  color: blue;
+  color: $primary_color;
   font-size: 24pt;
   font-weight: 300;
   letter-spacing: -1px;
@@ -350,7 +357,7 @@ h1{
 }
 #restaurant-hours td {
   padding: 5px;
-  background-color: #252831;
+  background-color: $base_color;
   font-size:.7em;
   width: 250px;
   color: white;
