@@ -7,14 +7,17 @@ nav, .inside #footer {
 /* CSS Document */
 body {
   font-family: "Karla", sans-serif;
+  font-size: 1em;
+  line-height: .9;
+  color: #333;
   background-color: #fdfdfd;
   margin: 0;
   position: relative; }
 
 h1 a {
   font-family: "Rubik", sans-serif;
-  font-size: 1.7em;
-  font-weight: 900;
+  font-size: 1.5em;
+  font-weight: 300;
   line-height: 1.2;
   color: blue;
   text-decoration: none; }
@@ -28,12 +31,6 @@ a {
 a:hover, a:focus {
   color: blue;
   text-decoration: none; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, sans-serif; }
-
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
 
 #maincontent {
   background-color: #f3f3f3;
@@ -62,9 +59,12 @@ nav {
     margin: auto; }
 
 nav h1 a {
-  color: #fff;
-  font-size: 14pt;
-  font-weight: 200;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  line-height: 1.2;
+  color: blue;
+  color: #f3f3f3;
   letter-spacing: 7px;
   text-transform: uppercase; }
 
@@ -114,6 +114,20 @@ table {
   background-color: blue;
   align-items: center;
   padding: 10px; }
+  .filter-options h2 {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1.2;
+    color: blue;
+    color: #f3f3f3;
+    margin-left: 10px; }
+
+.filter-options #neighborhoods-select, .filter-options #cuisines-select {
+  font-family: "Karla", sans-serif;
+  font-size: 1em;
+  line-height: .9;
+  color: #333; }
 
 @media only screen and (min-width: 500px) {
   #restaurants-list {
@@ -125,13 +139,6 @@ table {
     float: left; }
   .wrapper {
     float: right; } }
-
-.filter-options h2 {
-  color: white;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1;
-  margin-left: 10px; }
 
 .filter-options select {
   background-color: white;
@@ -152,8 +159,8 @@ table {
 /* ====================== Restaurant Listing ====================== */
 li h1 {
   font-family: "Rubik", sans-serif;
-  font-size: 1.7em;
-  font-weight: 900;
+  font-size: 1.5em;
+  font-weight: 300;
   line-height: 1.2;
   color: blue;
   text-decoration: none; }
@@ -251,15 +258,6 @@ th {
   width: 100%;
   bottom: 0;
   position: absolute; }
-
-h1 {
-  text-align: center;
-  color: blue;
-  font-family: Arial,sans-serif;
-  font-size: 1.5em;
-  font-weight: 200;
-  letter-spacing: 0;
-  line-height: 1.1; }
 
 .address-container {
   text-algin: center;

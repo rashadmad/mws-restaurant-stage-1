@@ -10,39 +10,59 @@ $Primary_font: 'Rubik', sans-serif;
 $secondary_font: 'Karla', sans-serif;
 
 
-@mixin fontStack($font,$element){
+@mixin fontStack($font,$element,$inverse:null){
   font-family: $font;
 
   @if $font == $Primary_font{
     @if $element == 'h1'{
-      font-size: 1.7em;
-      font-weight: 900;
+      font-size: 1.5em;
+      font-weight: 300;
       line-height: 1.2;
       color: $primary_color;
+
+      @if $inverse {
+        color: $card_color;
+      }
     }
     @else if $element == 'h2'{
-      font-size: 2em;
+      font-size: 1.2em;
       font-weight: 600;
       line-height: 1.2;
       color: $primary_color;
+
+      @if $inverse {
+        color: $card_color;
+      }
     }
     @else if $element == 'button'{
       font-size: 1em;
       font-weight: 300;
       line-height: 1.2;
       color: $primary_color;
+
+      @if $inverse {
+        color: $card_color;
+      }
     }
   }@else if $font == $secondary_font{
       @if $element == 'basic'{
         font-size: 1em;
         line-height: .9;
         color: $base_font_color;
+
+        @if $inverse {
+          color: $card_color;
+        }
     }
     @else if $element == 'quote'{
         font-size: 2em;
         font-style: italic;
         line-height: .5;
         color: $base_font_color;
+
+        @if $inverse {
+          color: $card_color;
+        }
     }
   }
 }
