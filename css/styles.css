@@ -16,7 +16,7 @@ body {
 
 h1 a {
   font-family: "Rubik", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-weight: 300;
   line-height: 1.2;
   color: blue;
@@ -60,7 +60,7 @@ nav {
 
 nav h1 a {
   font-family: "Rubik", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-weight: 300;
   line-height: 1.2;
   color: blue;
@@ -116,8 +116,8 @@ table {
   padding: 10px; }
   .filter-options h2 {
     font-family: "Rubik", sans-serif;
-    font-size: 1.2em;
-    font-weight: 600;
+    font-size: 1.5em;
+    font-weight: 400;
     line-height: 1.2;
     color: blue;
     color: #f3f3f3;
@@ -159,7 +159,7 @@ table {
 /* ====================== Restaurant Listing ====================== */
 li h1 {
   font-family: "Rubik", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-weight: 300;
   line-height: 1.2;
   color: blue;
@@ -224,6 +224,13 @@ li a {
   text-transform: uppercase; }
 
 /* ====================== Restaurant Details ====================== */
+#restaurant-container h2 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: blue; }
+
 th {
   color: blue;
   text-align: left;
@@ -294,7 +301,6 @@ th {
 #restaurant-address {
   text-algn: center;
   margin-top: 8px;
-  font-size: 12pt;
   text-align: center; }
 
 #restaurant-cuisine {

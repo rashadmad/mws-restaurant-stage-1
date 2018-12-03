@@ -236,6 +236,14 @@ li {
 }
 
 /* ====================== Restaurant Details ====================== */
+
+#restaurant-container {
+	h2 {
+		@include fontStack($Primary_font,h2);
+	}
+}
+
+
 th{
   color: $primary_color;
   text-align: left;
@@ -310,8 +318,8 @@ th{
 #restaurant-address {
 	text-algn: center;
   margin-top: 8px;
-  font-size: 12pt;
   text-align: center;
+
 }
 #restaurant-cuisine {
   background-color: $base_color;
