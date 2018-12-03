@@ -9,34 +9,30 @@
   transform: $property;
 }
 
-body,td,th,p{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1em;
-	color: $base_font_color;
-	line-height: 1.2;
-}
 body {
+	@include fontStack($secondary_font,body);
 	background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
 }
-ul, li {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: $base_font_color;
-	overflow: auto;
+h1 {
+	a {
+		@include fontStack($Primary_font,h1);
+		text-decoration: none;
+	}
 }
 a {
 	color: $primary_color;
 	text-decoration: none;
+	img {
+		border: none 0px $card_color;
+	}
 }
 a:hover, a:focus {
 	color: $primary_color;
 	text-decoration: none;
 }
-a img{
-	border: none 0px $card_color;
-}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -69,9 +65,9 @@ nav {
 	  height: auto;
 	  background-color: $base_color;
 	  text-align:center;
-}
-nav h1 {
-  margin: auto;
+		h1 {
+			margin: auto;
+		}
 }
 nav h1 a {
   color: #fff;
@@ -175,6 +171,20 @@ table{
 }
 
 /* ====================== Restaurant Listing ====================== */
+
+li {
+	h1 {
+		@include fontStack($Primary_font,h1);
+		text-decoration: none;
+	}
+	p {
+		@include fontStack($secondary_font,basic);
+	}
+	a {
+		@include fontStack($Primary_font,button);
+	}
+}
+
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -210,10 +220,7 @@ table{
 #reviews-list h1{
 	text-align: left;
 }
-#restaurants-list p {
-  margin: 0;
-  font-size: 11pt;
-}
+
 
 #restaurants-list li a {
   background-color: $primary_color;

@@ -1,36 +1,33 @@
 /*colors*/
+/*fonts*/
 /*spacing*/
 nav, .inside #footer {
   padding: 20px 0; }
 
 /* CSS Document */
-body, td, th, p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  color: #333;
-  line-height: 1.2; }
-
 body {
+  font-family: "Karla", sans-serif;
   background-color: #fdfdfd;
   margin: 0;
   position: relative; }
 
-ul, li {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10pt;
-  color: #333;
-  overflow: auto; }
+h1 a {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.7em;
+  font-weight: 900;
+  line-height: 1.2;
+  color: blue;
+  text-decoration: none; }
 
 a {
   color: blue;
   text-decoration: none; }
+  a img {
+    border: none 0px #f3f3f3; }
 
 a:hover, a:focus {
   color: blue;
   text-decoration: none; }
-
-a img {
-  border: none 0px #f3f3f3; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif; }
@@ -61,9 +58,8 @@ nav {
   height: auto;
   background-color: #252831;
   text-align: center; }
-
-nav h1 {
-  margin: auto; }
+  nav h1 {
+    margin: auto; }
 
 nav h1 a {
   color: #fff;
@@ -154,6 +150,27 @@ table {
   left: -9999px !important; }
 
 /* ====================== Restaurant Listing ====================== */
+li h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.7em;
+  font-weight: 900;
+  line-height: 1.2;
+  color: blue;
+  text-decoration: none; }
+
+li p {
+  font-family: "Karla", sans-serif;
+  font-size: 1em;
+  line-height: .9;
+  color: #333; }
+
+li a {
+  font-family: "Rubik", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.2;
+  color: blue; }
+
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -188,10 +205,6 @@ table {
 
 #reviews-list h1 {
   text-align: left; }
-
-#restaurants-list p {
-  margin: 0;
-  font-size: 11pt; }
 
 #restaurants-list li a {
   background-color: blue;
