@@ -1,13 +1,13 @@
 
+@import 'toolKit';
 @charset "utf-8";
 /* CSS Document */
 
-/*colors*/
-$primary_color: blue;
-$base_color: #252831;
-$card_color: #f3f3f3;
-$base_font_color: #333;
-
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
 
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
@@ -45,8 +45,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 #maincontent {
   background-color: $card_color;
-  width:100%;
-  min-height: 100%;
+	@include maxOut(true,true);
 }
 footer {
   bottom: 0;
@@ -65,11 +64,11 @@ footer {
 
 /* ====================== Navigation ====================== */
 nav {
-  width: 100%;
-  height: auto;
-  background-color: $base_color;
-  text-align:center;
-  padding: 20px 0;
+	@include maxOut(true,true);
+	@extend %default_spaceing;
+	  height: auto;
+	  background-color: $base_color;
+	  text-align:center;
 }
 nav h1 {
   margin: auto;
@@ -106,12 +105,12 @@ table{
 #breadcrumb li+li:before {
     padding: 8px;
     color: black;
-    content: "/\00a0";
+    content: "/\00a0" ;
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: $primary_color
+    color: $primary_color;
     text-decoration: none;
 }
 
@@ -260,9 +259,11 @@ th{
   background-color: #ccc;
 }
 .inside #footer {
+
+	@extend %default_spaceing;
+	@include maxOut(true,false);
   bottom: 0;
   position: absolute;
-  width: 100%;
 }
 h1{
 	text-align: center;

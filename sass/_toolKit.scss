@@ -1,0 +1,26 @@
+
+/*colors*/
+$primary_color: blue;
+$base_color: #252831;
+$card_color: #f3f3f3;
+$base_font_color: #333;
+
+/*spacing*/
+
+%default_spaceing {
+  padding: 20px 0;
+}
+
+@mixin maxOut($W,$H){
+  @if $W {
+    width: 100%;
+  }
+  @else if $H {
+    height: 100%;
+  }
+  @else {
+    @warn 'For this mixin to work you need to add a true value to $W and/or $H.';
+      @debug $W;
+      @debug $H;
+   }
+}
