@@ -121,13 +121,15 @@ table {
     line-height: 1.2;
     color: blue;
     color: #f3f3f3;
-    margin-left: 10px; }
-
-.filter-options #neighborhoods-select, .filter-options #cuisines-select {
-  font-family: "Karla", sans-serif;
-  font-size: 1em;
-  line-height: .9;
-  color: #333; }
+    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+  .filter-options #cuisines-select,
+  .filter-options #neighborhoods-select {
+    font-family: "Karla", sans-serif;
+    font-size: 1em;
+    line-height: .9;
+    color: #333; }
 
 @media only screen and (min-width: 500px) {
   #restaurants-list {

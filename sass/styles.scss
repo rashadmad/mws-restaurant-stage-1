@@ -119,21 +119,22 @@ table{
 /* ====================== Restaurant Filtering ====================== */
 
 .filter-options {
-	display: grid;
-	background-color: $primary_color;
-	align-items: center;
-	padding: 10px;
-	h2 {
-		@include fontStack($Primary_font,h2,$inverse:true);
-		margin-left: 10px;
-	}
-}
+  display: grid;
+  background-color: $primary_color;
+  align-items: center;
+  padding: 10px;
 
-.filter-options {
+  h2 {
+    @include fontStack($Primary_font,h2,$inverse:true);
+    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 
-	#neighborhoods-select,#cuisines-select {
-		@include fontStack($secondary_font,basic);
-	}
+  #cuisines-select,
+  #neighborhoods-select {
+    @include fontStack($secondary_font,basic);
+  }
 }
 
 @media only screen and (min-width: 500px) {
@@ -188,7 +189,7 @@ li {
 }
 
 #restaurants-list {
-  background-color: #f3f3f3;
+  background-color: $card_color;
   list-style: outside none none;
   margin: 0;
   padding: 30px 15px 60px;
