@@ -3,12 +3,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-@mixin transform($property) {
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
-}
-
 body {
 	@include fontStack($secondary_font,basic);
 		background-color: #fdfdfd;
