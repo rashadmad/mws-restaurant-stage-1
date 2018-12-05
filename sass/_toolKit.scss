@@ -5,6 +5,10 @@ $primary_color_inverse: orange;
 $base_color: #252831;
 $card_color: #f3f3f3;
 $base_font_color: #333;
+$dropShadow_color: #888888;
+
+$white: #fff;
+$shadow_color_dark: #0f1011;
 
 /*fonts*/
 $Primary_font: 'Rubik', sans-serif;
@@ -90,6 +94,10 @@ $secondary_font: 'Karla', sans-serif;
 %responsive_image {
   width: 100%;
   height: auto;
+}
+
+@mixin dropShadow($EW:5px,$NS:10px,$spread:8px,$color:$dropShadow_color) {
+  box-shadow: $EW $NS $spread $color;
 }
 
 @mixin maxOut($W,$H){

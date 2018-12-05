@@ -9,10 +9,17 @@ body {
 		margin: 0;
 		position:relative;
 }
+header {
+	@include dropShadow($EW:0,$NS:0,$spread:5px,$color:$shadow_color_dark);
+	z-index: 2000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 h1 {
   a {
     @include fontStack($Primary_font,h1);
-    text-decoration: none;
+		padding: 11px;
     color: $primary_color;
   	text-decoration: none;
 
@@ -68,7 +75,7 @@ nav h1 a {
   text-transform: uppercase;
 }
 table{
-	width: 100%;
+ width: 200px;
 }
 .address {
 	text-align: center !important;
@@ -80,7 +87,7 @@ table{
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    drop-shadow: (30px 10px 4px black);
+    drop-shadow: (30px 10px 4px $shadow_color_dark);
 }
 
 /* Display list items side by side */
@@ -134,48 +141,30 @@ table{
   #neighborhoods-select {
     @include fontStack($secondary_font,basic);
   }
-}
 
-@media only screen and (min-width: 500px) {
-
-	#restaurants-list{
-		grid-template-columns: auto auto auto;
+	select {
+		background-color: white;
+		border: 1px solid #fff;
+		font-family: Arial,sans-serif;
+		font-size: 11pt;
+		height: 35px;
+		letter-spacing: 0;
+		margin: 10px;
+		padding: 0 10px;
+		width: 95%;
 	}
-
-	.filter-options{
-		display: block;
-	  overflow: hidden;
+	label {
+		position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
 	}
-	.h2-wrapper{
-		float: left;
-	}
-	.wrapper{
-			float: right;
-	}
-}
-
-.filter-options select {
-  background-color: white;
-  border: 1px solid #fff;
-  font-family: Arial,sans-serif;
-  font-size: 11pt;
-  height: 35px;
-  letter-spacing: 0;
-  margin: 10px;
-  padding: 0 10px;
-	width: 95%;
-}
-
-.visually-hidden {
-	 position: absolute !important;
-   top: -9999px !important;
-   left: -9999px !important;
 }
 
 /* ====================== Restaurant Listing ====================== */
 
 li {
   @extend %clear_fix;
+	@include dropShadow;
 	h2 {
 		@include fontStack($Primary_font,h2);
 		text-decoration: none;
@@ -186,10 +175,23 @@ li {
 	}
 	a {
 		@include fontStack($Primary_font,button);
+		@include dropShadow($EW:3px,$NS:3px,$spread:7px);
     float: right;
     margin: 10px;
-    padding: 40px;
+    padding: 10px;
     border-radius: 20px;
+		background-color: $primary_color;
+		color: $white;
+		text-decoration: none;
+		text-transform: uppercase;
+		&:hover {
+			background-color: $white;
+			color: $primary_color;
+		}
+		&:after {
+			background-color: $white;
+			color: $primary_color;
+		}
 	}
   img {
     @extend %responsive_image;
@@ -204,7 +206,6 @@ li {
 }
 #restaurants-list li {
   background-color: #fff;
-  border: 2px solid #ccc;
   margin: 10px;
   padding: 12px;
 }
@@ -223,17 +224,6 @@ li {
 }
 #reviews-list h1{
 	text-align: left;
-}
-
-
-#restaurants-list li a {
-  background-color: $primary_color;
-  border-bottom: 3px solid #eee;
-  color: #fff;
-  display: inline-block;
-  padding: 8px;
-  text-decoration: none;
-  text-transform: uppercase;
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -260,12 +250,6 @@ th{
   margin-top: 115px;
 }
 
-.inside header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2000;
-}
 .inside #map-container {
   background: $primary_color none repeat scroll 0 0;
   height: auto;
