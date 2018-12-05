@@ -1,29 +1,30 @@
 /*colors*/
 /*fonts*/
 /*tools*/
-li {
+#restaurants-list li {
   overflow: auto; }
 
 /*spacing*/
 footer, nav {
   padding: 20px 0; }
 
-li img {
+#restaurants-list li img {
   width: 100%;
   height: auto; }
 
+/*media queris*/
 /* CSS Document */
 body {
   font-family: "Karla", sans-serif;
   font-size: 1em;
-  line-height: .9;
+  line-height: 0.9;
   color: #333;
   background-color: #fdfdfd;
   margin: 0;
   position: relative; }
 
 header {
-  box-shadow: 0 0 5px #0f1011;
+  box-shadow: 5px 2px 8px #888888;
   z-index: 2000;
   position: fixed;
   top: 0;
@@ -149,7 +150,7 @@ table {
   .filter-options #neighborhoods-select {
     font-family: "Karla", sans-serif;
     font-size: 1em;
-    line-height: .9;
+    line-height: 0.9;
     color: #333; }
   .filter-options select {
     background-color: white;
@@ -167,9 +168,9 @@ table {
     left: -9999px !important; }
 
 /* ====================== Restaurant Listing ====================== */
-li {
-  box-shadow: 5px 10px 8px #888888; }
-  li h2 {
+#restaurants-list li {
+  box-shadow: 2px 3px 8px #888888; }
+  #restaurants-list li h2 {
     font-family: "Rubik", sans-serif;
     font-size: 1.5em;
     font-weight: 400;
@@ -177,12 +178,12 @@ li {
     color: blue;
     text-decoration: none;
     text-align: left; }
-  li p {
+  #restaurants-list li p {
     font-family: "Karla", sans-serif;
     font-size: 1em;
-    line-height: .9;
+    line-height: 0.9;
     color: #333; }
-  li a {
+  #restaurants-list li a {
     font-family: "Rubik", sans-serif;
     font-size: 1em;
     font-weight: 300;
@@ -197,10 +198,10 @@ li {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase; }
-    li a:hover {
+    #restaurants-list li a:hover {
       background-color: #fff;
       color: blue; }
-    li a:after {
+    #restaurants-list li a:after {
       background-color: #fff;
       color: blue; }
 
@@ -349,3 +350,7 @@ th {
 
 td, th {
   line-height: 2.5; }
+
+@media (min-width: 600px) {
+  li {
+    display: none; } }

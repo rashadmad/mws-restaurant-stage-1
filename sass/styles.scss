@@ -10,7 +10,7 @@ body {
 		position:relative;
 }
 header {
-	@include dropShadow($EW:0,$NS:0,$spread:5px,$color:$shadow_color_dark);
+	@include dropShadow($EW:5px,$NS:2px,$spread:8px,$color:$dropShadow_color);
 	z-index: 2000;
   position: fixed;
   top: 0;
@@ -162,9 +162,9 @@ table{
 
 /* ====================== Restaurant Listing ====================== */
 
-li {
+#restaurants-list li {
   @extend %clear_fix;
-	@include dropShadow;
+	@include dropShadow(2px,3px);
 	h2 {
 		@include fontStack($Primary_font,h2);
 		text-decoration: none;
@@ -348,4 +348,8 @@ th{
 }
 td, th {
 	line-height: 2.5;
+}
+
+@media (min-width: $breakpoint-tablet) {
+
 }
