@@ -72,33 +72,29 @@ nav h1 a {
   letter-spacing: 7px;
   text-transform: uppercase;
 }
-table{
- width: 200px;
-}
 .address {
 	text-align: center !important;
 }
 
 #breadcrumb {
-    padding: 10px 40px 16px;
+		@include fontStack($Primary_font,h3);
+    padding: 25px 40px 16px;
     list-style: none;
     background-color: #eee;
-    font-size: 17px;
     margin: 0;
     drop-shadow: (30px 10px 4px $shadow_color_dark);
+
+		li {
+			display: inline;
+		}
+
+		li+li:before {
+		    padding: 8px;
+		    color: black;
+		    content: "/\00a0" ;
+		}
 }
 
-/* Display list items side by side */
-#breadcrumb li {
-    display: inline;
-}
-
-/* Add a slash symbol (/) before/behind each list item */
-#breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0" ;
-}
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
@@ -245,7 +241,7 @@ th{
   text-align: -webkit-center;
 }
 .review-map #map{
-  margin-top: 115px;
+  margin-top: 135px;
 }
 
 .inside #map-container {
@@ -263,6 +259,17 @@ th{
 	margin:0;
 	padding:0;
 }
+	table {
+		@include fontStack($Primary_font,h2);
+		margin-left: auto;
+		margin-right: auto;
+		td {
+			text-algin: center;
+		}
+		tr {
+			text-algin: center;
+		}
+	}
 #restaurant-name {
   text-align:center;
   color: $primary_color;
@@ -272,13 +279,14 @@ th{
   letter-spacing: 7px;
   text-transform: uppercase;
   line-height: 1.1;
-  margin: 20px 5px 20px 5px;
+  margin: 35px 5px 35px 5px;
 
-}
-#restaurant-img {
-	max-width: 100%;
-	min-width: 350px;
-  text-align: center;
+	img {
+		max-width: 100%;
+		min-width: 350px;
+	  text-align: center;
+	}
+
 }
 .restaurant-img{
 	width: 100%;
@@ -301,6 +309,7 @@ th{
   font-weight: 300;
   letter-spacing: 10px;
   padding: 2px 0;
+	margin: 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -348,10 +357,12 @@ td, th {
 			text-align: center;
 		}
 		a {
+			text-align: center;
 			float: none;
+			width: 150px;
 			display: block;
     	margin-left: auto;
-  	  margin-right: auto 
+  	  margin-right: auto
 		}
 	}
 }

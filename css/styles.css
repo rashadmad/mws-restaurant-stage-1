@@ -84,29 +84,26 @@ nav h1 a {
   letter-spacing: 7px;
   text-transform: uppercase; }
 
-table {
-  width: 200px; }
-
 .address {
   text-align: center !important; }
 
 #breadcrumb {
-  padding: 10px 40px 16px;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5em;
+  font-weight: 700;
+  line-height: 1.2;
+  color: blue;
+  padding: 25px 40px 16px;
   list-style: none;
   background-color: #eee;
-  font-size: 17px;
   margin: 0;
   drop-shadow: 30px 10px 4px #0f1011; }
-
-/* Display list items side by side */
-#breadcrumb li {
-  display: inline; }
-
-/* Add a slash symbol (/) before/behind each list item */
-#breadcrumb li + li:before {
-  padding: 8px;
-  color: black;
-  content: "/\00a0"; }
+  #breadcrumb li {
+    display: inline; }
+  #breadcrumb li + li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0"; }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
@@ -249,7 +246,7 @@ th {
   text-align: -webkit-center; }
 
 .review-map #map {
-  margin-top: 115px; }
+  margin-top: 135px; }
 
 .inside #map-container {
   background: blue none repeat scroll 0 0;
@@ -266,6 +263,19 @@ th {
   margin: 0;
   padding: 0; }
 
+table {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.2;
+  color: blue;
+  margin-left: auto;
+  margin-right: auto; }
+  table td {
+    text-algin: center; }
+  table tr {
+    text-algin: center; }
+
 #restaurant-name {
   text-align: center;
   color: blue;
@@ -275,12 +285,11 @@ th {
   letter-spacing: 7px;
   text-transform: uppercase;
   line-height: 1.1;
-  margin: 20px 5px 20px 5px; }
-
-#restaurant-img {
-  max-width: 100%;
-  min-width: 350px;
-  text-align: center; }
+  margin: 35px 5px 35px 5px; }
+  #restaurant-name img {
+    max-width: 100%;
+    min-width: 350px;
+    text-align: center; }
 
 .restaurant-img {
   width: 100%; }
@@ -302,6 +311,7 @@ th {
   font-weight: 300;
   letter-spacing: 10px;
   padding: 2px 0;
+  margin: 0;
   text-align: center;
   text-transform: uppercase; }
 
@@ -345,7 +355,9 @@ td, th {
   #restaurants-list li h2, #restaurants-list li p {
     text-align: center; }
   #restaurants-list li a {
+    text-align: center;
     float: none;
+    width: 150px;
     display: block;
     margin-left: auto;
     margin-right: auto; } }

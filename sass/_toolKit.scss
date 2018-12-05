@@ -32,8 +32,8 @@ $secondary_font: 'Karla', sans-serif;
       }
     } @else
     if $element == 'h3' {
-      font-size: 1.2em;
-      font-weight: 500;
+      font-size: 1.5em;
+      font-weight: 700;
       line-height: 1.2;
       color: $primary_color;
       @if $inverse {
