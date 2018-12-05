@@ -54,9 +54,7 @@ footer {
   text-transform: uppercase;
 }
 
-.li-button{
-	margin-top: 10px;
-}
+
 
 /* ====================== Navigation ====================== */
 nav {
@@ -323,10 +321,7 @@ th{
   letter-spacing: -1px;
   padding-bottom: 1pt;
 }
-#reviews-list {
-  margin: 0;
-  padding: 0;
-}
+
 #reviews-list li {
   background-color: #fff;
   border: 2px solid #f3f3f3;
@@ -335,9 +330,6 @@ th{
   margin: 0 0 30px;
   padding: 15px;
   position: relative;
-}
-#reviews-list li p {
-  margin: 0 0 10px;
 }
 #restaurant-hours td {
   padding: 5px;
@@ -351,5 +343,15 @@ td, th {
 }
 
 @media (min-width: $breakpoint-tablet) {
-
+	#restaurants-list li {
+		h2, p{
+			text-align: center;
+		}
+		a {
+			float: none;
+			display: block;
+    	margin-left: auto;
+  	  margin-right: auto 
+		}
+	}
 }
