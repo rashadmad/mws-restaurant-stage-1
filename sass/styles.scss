@@ -115,7 +115,7 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 
 .filter-options {
-	@include dropShadow($color:$shadow_color_dark);
+
   display: grid;
   background-color: $primary_color;
   align-items: center;
@@ -154,8 +154,11 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 
-#restaurants-list {
-	max-width: 1000px;
+.list-container {
+	@include dropShadow(2px,3px);
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #restaurants-list li {
@@ -163,7 +166,7 @@ nav h1 a {
 	@include dropShadow(2px,3px);
 	.info {
 		@extend %clear_fix;
-		height: 180px;
+		height: 165px;
 	}
 	h2 {
 		@include fontStack($Primary_font,h2);
@@ -185,10 +188,12 @@ nav h1 a {
 		text-decoration: none;
 		text-transform: uppercase;
 		&:hover {
+			@include dropShadow($display:none);
 			background-color: $white;
 			color: $primary_color;
 		}
 		&:active {
+			@include dropShadow($display:none);
 			background-color: $primary_color;
 			color: $white;
 		}

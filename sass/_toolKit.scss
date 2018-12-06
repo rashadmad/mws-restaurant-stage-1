@@ -88,8 +88,11 @@ $secondary_font: 'Karla', sans-serif;
   width: 100%;
   height: auto;
 }
-@mixin dropShadow($EW:5px,$NS:10px,$spread:8px,$color:$dropShadow_color) {
+@mixin dropShadow($EW:5px,$NS:10px,$spread:8px,$color:$dropShadow_color,$display:'yes') {
   box-shadow: $EW $NS $spread $color;
+  @if $display == 'none' {
+    box-shadow: none;
+  }
 }
 @mixin maxOut($W,$H) {
   @if $W {
