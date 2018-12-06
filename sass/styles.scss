@@ -115,6 +115,7 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 
 .filter-options {
+	@include dropShadow($color:$shadow_color_dark);
   display: grid;
   background-color: $primary_color;
   align-items: center;
@@ -142,6 +143,7 @@ nav h1 a {
 		margin: 10px;
 		padding: 0 10px;
 		width: 95%;
+
 	}
 	label {
 		position: absolute !important;
@@ -152,9 +154,17 @@ nav h1 a {
 
 /* ====================== Restaurant Listing ====================== */
 
+#restaurants-list {
+	max-width: 1000px;
+}
+
 #restaurants-list li {
   @extend %clear_fix;
 	@include dropShadow(2px,3px);
+	.info {
+		@extend %clear_fix;
+		height: 180px;
+	}
 	h2 {
 		@include fontStack($Primary_font,h2);
 		text-decoration: none;
@@ -178,9 +188,9 @@ nav h1 a {
 			background-color: $white;
 			color: $primary_color;
 		}
-		&:after {
-			background-color: $white;
-			color: $primary_color;
+		&:active {
+			background-color: $primary_color;
+			color: $white;
 		}
 	}
   img {
@@ -244,6 +254,9 @@ th{
   margin: 10px;
   width: 100%;
   text-align: -webkit-center;
+}
+#map {
+	margin-top: 70px;
 }
 .review-map #map{
   margin-top: 135px;
@@ -365,7 +378,7 @@ td, th {
 	line-height: 2;
 }
 
-@media (min-width: $breakpoint-tablet) {
+@media (min-width: $breakpoint-mobile) {
 	#restaurants-list li {
 		h2, p{
 			text-align: center;
@@ -379,13 +392,41 @@ td, th {
   	  margin-right: auto
 		}
 	}
-	#select-wrapper{
-		float: right;
-	}
-	#h2-wrapper{
-		float: right;
+	.filter-options {
+		display:grid;
+		grid-template-columns: auto auto;
+		h2 {
+			margin-bottom: 60px;
+			margin-left: 25px;
+			margin-right: 20px;
+		}
 	}
 	select{
-		width: 300px;
+		float: right;
+		max-width: 300px;
+		margin:2px;
+	}
+}
+
+@media (min-width: $breakpoint-tablet) {
+	#restaurants-list {
+		display:grid;
+		grid-template-columns: auto auto;
+	}
+}
+
+@media (min-width: $breakpoint-desktop) {
+	#restaurants-list {
+		display:grid;
+		grid-template-columns: auto auto auto;
+	}
+}
+
+@media (min-width: $breakpoint-desktop-XL) {
+	#restaurants-list {
+		margin-left: auto;
+		margin-right: auto;
+		display:grid;
+		grid-template-columns: auto auto auto auto;
 	}
 }

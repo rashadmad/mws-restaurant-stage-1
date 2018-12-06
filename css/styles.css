@@ -1,7 +1,7 @@
 /*colors*/
 /*fonts*/
 /*tools*/
-#restaurants-list li, #reviews-list li {
+#restaurants-list li, #restaurants-list li .info, #reviews-list li {
   overflow: auto; }
 
 /*spacing*/
@@ -122,6 +122,7 @@ nav h1 a {
 
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
+  box-shadow: 5px 10px 8px #0f1011;
   display: grid;
   background-color: blue;
   align-items: center;
@@ -158,8 +159,13 @@ nav h1 a {
     left: -9999px !important; }
 
 /* ====================== Restaurant Listing ====================== */
+#restaurants-list {
+  max-width: 1000px; }
+
 #restaurants-list li {
   box-shadow: 2px 3px 8px #888888; }
+  #restaurants-list li .info {
+    height: 180px; }
   #restaurants-list li h2 {
     font-family: "Rubik", sans-serif;
     font-size: 1.5em;
@@ -191,9 +197,9 @@ nav h1 a {
     #restaurants-list li a:hover {
       background-color: #fff;
       color: blue; }
-    #restaurants-list li a:after {
-      background-color: #fff;
-      color: blue; }
+    #restaurants-list li a:active {
+      background-color: blue;
+      color: #fff; }
 
 #restaurants-list {
   background-color: #f3f3f3;
@@ -249,6 +255,9 @@ th {
   margin: 10px;
   width: 100%;
   text-align: -webkit-center; }
+
+#map {
+  margin-top: 70px; }
 
 .review-map #map {
   margin-top: 135px; }
@@ -375,9 +384,31 @@ td, th {
     display: block;
     margin-left: auto;
     margin-right: auto; }
-  #select-wrapper {
-    float: right; }
-  #h2-wrapper {
-    float: right; }
+  .filter-options {
+    display: grid;
+    grid-template-columns: auto auto; }
+    .filter-options h2 {
+      margin-bottom: 60px;
+      margin-left: 25px;
+      margin-right: 20px; }
   select {
-    width: 300px; } }
+    float: right;
+    max-width: 300px;
+    margin: 2px; } }
+
+@media (min-width: 600px) {
+  #restaurants-list {
+    display: grid;
+    grid-template-columns: auto auto; } }
+
+@media (min-width: 750px) {
+  #restaurants-list {
+    display: grid;
+    grid-template-columns: auto auto auto; } }
+
+@media (min-width: 1000px) {
+  #restaurants-list {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto; } }

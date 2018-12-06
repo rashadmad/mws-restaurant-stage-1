@@ -104,4 +104,7 @@ $secondary_font: 'Karla', sans-serif;
   }
 }
 /*media queris*/
-$breakpoint-tablet: 450px;
+$breakpoint-mobile: 450px;
+$breakpoint-tablet: 600px;
+$breakpoint-desktop: 750px;
+$breakpoint-desktop-XL: 1000px;
