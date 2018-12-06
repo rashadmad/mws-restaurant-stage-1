@@ -6,9 +6,12 @@ $card_color: #f3f3f3;
 $base_font_color: #333;
 $dropShadow_color: #888888;
 $white: #fff;
-$shadow_color_dark: #0f1011; /*fonts*/
+$shadow_color_dark: #0f1011;
+
+/*fonts*/
 $Primary_font: 'Rubik', sans-serif;
 $secondary_font: 'Karla', sans-serif;
+
 
 @mixin fontStack($font,$element,$inverse:null) {
   font-family: $font;
@@ -53,7 +56,7 @@ $secondary_font: 'Karla', sans-serif;
   if $font == $secondary_font {
     @if $element == 'basic' {
       font-size: 1em;
-      line-height: 0.9;
+      line-height: 1;
       color: $base_font_color;
       @if $inverse {
         color: $card_color;

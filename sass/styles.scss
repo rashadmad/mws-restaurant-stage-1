@@ -87,7 +87,15 @@ nav h1 a {
 		li {
 			display: inline;
 		}
+		a {
+			color: $primary_color;
+			text-decoration: none;
 
+			&:hover {
+				color: $primary_color_inverse;
+				text-decoration: underline;
+			}
+		}
 		li+li:before {
 		    padding: 8px;
 		    color: black;
@@ -95,18 +103,6 @@ nav h1 a {
 		}
 }
 
-
-/* Add a color to all links inside the list */
-#breadcrumb li a {
-    color: $primary_color;
-    text-decoration: none;
-}
-
-/* Add a color on mouse-over */
-#breadcrumb li a:hover {
-    color: $primary_color_inverse;
-    text-decoration: underline;
-}
 /* ====================== Map ====================== */
 #map {
   height: 400px;
@@ -216,8 +212,17 @@ nav h1 a {
 	color: $primary_color;
 	text-transform: uppercase;
 }
-#reviews-list h1{
-	text-align: left;
+#reviews-list {
+	li{
+		@extend %clear_fix;
+		@include dropShadow(2px,3px);
+	}
+	h1{
+		text-align: left;
+	}
+	p{
+		@include fontStack($secondary_font,basic);
+	}
 }
 
 /* ====================== Restaurant Details ====================== */
@@ -259,17 +264,26 @@ th{
 	margin:0;
 	padding:0;
 }
+table-wrapper {
+		display:inline-block;
+		padding: 20px;
+		width: 960px;
+    border: 3px solid #73AD21;
 	table {
-		@include fontStack($Primary_font,h2);
-		margin-left: auto;
-		margin-right: auto;
+		@include fontStack($secondary_font,basic);
+
+		width: 100%;
+		text-align: center;
 		td {
+			@include fontStack($Primary_font,h2);
 			text-algin: center;
 		}
 		tr {
 			text-algin: center;
 		}
 	}
+}
+
 #restaurant-name {
   text-align:center;
   color: $primary_color;
@@ -348,7 +362,7 @@ th{
   color: white;
 }
 td, th {
-	line-height: 2.5;
+	line-height: 2;
 }
 
 @media (min-width: $breakpoint-tablet) {
@@ -364,5 +378,14 @@ td, th {
     	margin-left: auto;
   	  margin-right: auto
 		}
+	}
+	#select-wrapper{
+		float: right;
+	}
+	#h2-wrapper{
+		float: right;
+	}
+	select{
+		width: 300px;
 	}
 }
