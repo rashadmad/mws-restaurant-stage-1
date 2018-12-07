@@ -104,6 +104,7 @@ nav h1 a {
 }
 
 /* ====================== Map ====================== */
+
 #map {
   height: 400px;
   width: 100%;
@@ -112,6 +113,24 @@ nav h1 a {
 .leaflet-control-attribution a {
   color: $primary_color !important;
 }
+#map {
+	margin-top: 70px;
+}
+.review-map #map{
+  margin-top: 135px;
+}
+
+.inside #map-container {
+  background: $primary_color none repeat scroll 0 0;
+  height: auto;
+  right: 0;
+  top: 80px;
+  width: 100%;
+}
+.inside #map {
+  background-color: #ccc;
+}
+
 /* ====================== Restaurant Filtering ====================== */
 
 .filter-options {
@@ -228,43 +247,50 @@ nav h1 a {
 	text-transform: uppercase;
 }
 
-#reviews-list li {
-  border: 2px solid #f3f3f3;
-  list-style-type: none;
-  position: relative;
+/* ====================== Restaurant Reviews ====================== */
+
+#reviews-container {
+  padding: 30px 40px 80px;
+
+	h2 {
+
+		text-align: left;
+	}
 }
 
 #reviews-list {
 	li{
 		@extend %clear_fix;
 		@include dropShadow(2px,3px);
-	  margin: 0 0 30px;
-	  padding: 15px;
+		border: 2px solid $card_color;
+		list-style-type: none;
+		position: relative;
 		background-color: $card_color;
 		display: grid;
 		grid-template-columns: auto auto auto auto;
-		grid-template-rows: auto auto auto auto auto;
+		grid-template-rows: auto auto auto auto;
 	}
 	h2 {
+		@include fontStack($Primary_font,h2);
 		grid-column: 1;
 		grid-row: 1;
 	}
 	.rating {
 		padding: 5px;
 		text-align: left;
-		grid-column: 1/5;
+		grid-column: 1/4;
 		grid-row: 2;
 	}
 	.date {
 		@include fontStack($Primary_font,h3);
 		text-align: right;
-		grid-column: 2/5;
+		grid-column: 2/4;
 		grid-row: 4;
 	}
 	.comments {
 		@include fontStack($secondary_font,quote);
 		text-align: left;
-		grid-column: 1/5;
+		grid-column: 1/4;
 		grid-row: 3;
 	}
 	p{
@@ -292,33 +318,22 @@ th{
   width: 100%;
   text-align: -webkit-center;
 }
-#map {
-	margin-top: 70px;
+
+#restaurant-hours td {
+  padding: 5px;
+  background-color: $base_color;
+  font-size:.7em;
+  width: 250px;
+  color: white;
 }
-.review-map #map{
-  margin-top: 135px;
+td, th {
+	line-height: 2;
 }
 
-.inside #map-container {
-  background: $primary_color none repeat scroll 0 0;
-  height: auto;
-  right: 0;
-  top: 80px;
-  width: 100%;
-}
-.inside #map {
-  background-color: #ccc;
-}
-.address-container{
-	text-algin: center;
-	margin:0;
-	padding:0;
-}
 table-wrapper {
 		display:inline-block;
 		padding: 20px;
 		width: 960px;
-    border: 3px solid #73AD21;
 	table {
 		@include fontStack($secondary_font,basic);
 
@@ -381,31 +396,11 @@ table-wrapper {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
 }
-#reviews-container {
-  padding: 30px 40px 80px;
-}
-#reviews-container h2{
-	text-align: left;
-}
-#reviews-container h2 {
-  color: $primary_color;
-  font-size: 24pt;
-  font-weight: 300;
-  letter-spacing: -1px;
-  padding-bottom: 1pt;
-}
 
 
-#restaurant-hours td {
-  padding: 5px;
-  background-color: $base_color;
-  font-size:.7em;
-  width: 250px;
-  color: white;
-}
-td, th {
-	line-height: 2;
-}
+
+
+
 
 @media (min-width: $breakpoint-mobile) {
 	#restaurants-list li {
