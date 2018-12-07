@@ -23,7 +23,7 @@ $breakpoint-desktop-XL: 1000px;
   font-family: $font;
   @if $font == $Primary_font {
     @if $element == 'h1' {
-      font-size: 1.7em;
+      font-size: 1.2em;
       font-weight: 300;
       line-height: 1.2;
       color: $primary_color;
