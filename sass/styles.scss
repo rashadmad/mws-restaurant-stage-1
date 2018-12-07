@@ -306,6 +306,15 @@ nav h1 a {
 	}
 }
 
+#restaurant-cuisine {
+  background-color: $base_color;
+  color: #ddd;
+  letter-spacing: 10px;
+  padding: 2px 0;
+	margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 th{
   color: $primary_color;
@@ -319,35 +328,28 @@ th{
   text-align: -webkit-center;
 }
 
-#restaurant-hours td {
-  padding: 5px;
-  background-color: $base_color;
-  font-size:.7em;
-  width: 250px;
-  color: white;
-}
-td, th {
-	line-height: 2;
-}
-
-table-wrapper {
-		display:inline-block;
-		padding: 20px;
-		width: 960px;
 	table {
 		@include fontStack($secondary_font,basic);
-
-		width: 100%;
+		display: none;
 		text-align: center;
+		td, th {
+			line-height: 2;
+		}
 		td {
 			@include fontStack($Primary_font,h2);
+			margin-left: auto;
+    	margin-right: auto;
+			padding: 5px;
+			background-color: $base_color;
+			font-size:.7em;
+			width: 250px;
+			color: white;
 			text-algin: center;
 		}
 		tr {
 			text-algin: center;
 		}
 	}
-}
 
 #restaurant-name {
   text-align:center;
@@ -378,17 +380,7 @@ table-wrapper {
   text-align: center;
 
 }
-#restaurant-cuisine {
-  background-color: $base_color;
-  color: #ddd;
-  font-size: 12pt;
-  font-weight: 300;
-  letter-spacing: 10px;
-  padding: 2px 0;
-	margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
+
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
