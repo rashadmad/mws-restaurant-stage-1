@@ -20,7 +20,9 @@
     "browser-sync": "^2.26.3",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
+    "gulp-connect": "^5.7.0",
     "gulp-sass": "^4.0.2",
-    "gulp-watch-sass": "^1.4.1"
+    "gulp-watch-sass": "^1.4.1",
+    "gulp-webserver": "^0.9.1"
   }
 }

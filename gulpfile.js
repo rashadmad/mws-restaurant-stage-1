@@ -2,17 +2,14 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const log = require('fancy-log');
 const prefixer = require('gulp-autoprefixer');
-const browserSync = require('browser-sync').create();
+const connect = require('gulp-connect');
+
+gulp.task('connect', function(done) {
+  connect.server({port: 8000});
+  done();
+});
 
 const sassFiles = 'scss/**/*.scss';
-
-gulp.task('browserSync', function() {
-  browserSync.init({
-    server: {
-      baseDir: '/mws-restaurant-stage-1'
-    },
-  })
-})
 
 gulp.task('styles', function(){
   return gulp.src(sassFiles)
@@ -23,15 +20,12 @@ gulp.task('styles', function(){
             cascade: false
         }))
     .pipe(gulp.dest('css'))
-    .pipe(browserSync.reload({
-      stream: true
-    }))
 });
 
 gulp.task('watch', function() {
     gulp.watch(sassFiles, gulp.series('styles'));
 });
 
-gulp.task('default', gulp.parallel('watch','browserSync', function() {
+gulp.task('default', gulp.parallel('watch', function() {
   log("css file updated");
 }));
