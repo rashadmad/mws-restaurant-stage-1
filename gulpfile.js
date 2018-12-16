@@ -4,12 +4,17 @@ const log = require('fancy-log');
 const prefixer = require('gulp-autoprefixer');
 const connect = require('gulp-connect');
 
+const sassFiles = 'scss/**/*.scss';
+
 gulp.task('connect', function(done) {
-  connect.server({port: 8000});
+  connect.server({
+    root: 'mws-restaurant-stage-1',
+    livereload: true,
+    port: 8000
+  });
   done();
 });
 
-const sassFiles = 'scss/**/*.scss';
 
 gulp.task('styles', function(){
   return gulp.src(sassFiles)
@@ -26,6 +31,6 @@ gulp.task('watch', function() {
     gulp.watch(sassFiles, gulp.series('styles'));
 });
 
-gulp.task('default', gulp.parallel('watch', function() {
-  log("css file updated");
+gulp.task('default', gulp.series('connect','watch', function(done) {
+  done();
 }));
