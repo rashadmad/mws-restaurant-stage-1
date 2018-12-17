@@ -119,29 +119,26 @@ table {
   -ms-flex-align: center;
   align-items: center;
   padding: 10px; }
-
-#filter-options h2 {
-  color: white;
-  font-size: 1rem;
-  font-weight: normal;
-  line-height: 1;
-  margin-left: 10px; }
-
-#filter-options select {
-  background-color: white;
-  border: 1px solid #fff;
-  font-family: Arial,sans-serif;
-  font-size: 11pt;
-  height: 35px;
-  letter-spacing: 0;
-  margin: 10px;
-  padding: 0 10px;
-  width: 95%; }
-
-.visually-hidden {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important; }
+  #filter-options h2 {
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+    margin-left: 10px; }
+  #filter-options select {
+    background-color: white;
+    border: 1px solid #fff;
+    font-family: Arial,sans-serif;
+    font-size: 11pt;
+    height: 35px;
+    letter-spacing: 0;
+    margin: 10px;
+    padding: 0 10px;
+    width: 95%; }
+  #filter-options label {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important; }
 
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
