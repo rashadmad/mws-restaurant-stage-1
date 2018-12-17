@@ -20,4 +20,4 @@ gulp.task('watch', function() {
     gulp.watch(sassFiles, gulp.series('styles'));
 });
 
-gulp.task('default', gulp.parallel('styles'));
+gulp.task('default', gulp.parallel('styles','watch'));

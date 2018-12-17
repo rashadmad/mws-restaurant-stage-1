@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
-#maincontent {
+main {
   background-color: #f3f3f3;
   width: 100%;
   min-height: 100%; }
@@ -112,7 +112,7 @@ table {
   background-color: #ccc; }
 
 /* ====================== Restaurant Filtering ====================== */
-.filter-options {
+#filter-options {
   display: grid;
   background-color: blue;
   -webkit-box-align: center;
@@ -120,14 +120,14 @@ table {
   align-items: center;
   padding: 10px; }
 
-.filter-options h2 {
+#filter-options h2 {
   color: white;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
   margin-left: 10px; }
 
-.filter-options select {
+#filter-options select {
   background-color: white;
   border: 1px solid #fff;
   font-family: Arial,sans-serif;
@@ -307,7 +307,7 @@ h1 {
 @media only screen and (min-width: 500px) {
   #restaurants-list {
     grid-template-columns: auto auto auto; }
-  .filter-options {
+  #filter-options {
     display: block;
     overflow: hidden; }
   .h2-wrapper {
@@ -321,7 +321,7 @@ h1 {
     grid-template-columns: 1fr 1fr; } }
 
 @media only screen and (min-width: 700px) {
-  .filter-options select {
+  #filter-options select {
     width: 150px; }
   #restaurants-list {
     grid-template-columns: 1fr 1fr 1fr; }
