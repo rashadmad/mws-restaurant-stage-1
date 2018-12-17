@@ -15,21 +15,22 @@ body {
 	position:relative;
 }
 ul, li {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
-	color: #333;
 	overflow: auto;
 }
 a {
+	img{
+		border: none 0px #fff;
+	}
 	color: blue;
 	text-decoration: none;
-}
-a:hover, a:focus {
-	color: blue;
-	text-decoration: none;
-}
-a img{
-	border: none 0px #fff;
+	&:hover{
+		color: blue;
+		text-decoration: none;
+	}
+	&:focus{
+		color: blue;
+		text-decoration: none;
+	}
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
@@ -51,10 +52,6 @@ footer {
   padding: 25px;
   text-align: center;
   text-transform: uppercase ;
-}
-
-.li-button{
-	margin-top: 10px;
 }
 
 /* ====================== Navigation ====================== */
@@ -175,7 +172,9 @@ header {
 	  font-family: Arial,sans-serif;
 	  margin: 10px;
 	  padding: 12px;
+
 		a {
+			margin-top: 10px;
 		  background-color: blue;
 		  border-bottom: 3px solid #eee;
 		  color: #fff;
@@ -283,22 +282,21 @@ header {
 		margin:0;
 		padding:0;
 	}
+	#reviews-container {
+	  padding: 30px 40px 80px;
+		h2 {
+			color: blue;
+		  font-size: 24pt;
+		  font-weight: 300;
+		  letter-spacing: -1px;
+		  padding-bottom: 1pt;
+		}
+	}
 }
-
 
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-}
-#reviews-container {
-  padding: 30px 40px 80px;
-	h2 {
-		color: blue;
-	  font-size: 24pt;
-	  font-weight: 300;
-	  letter-spacing: -1px;
-	  padding-bottom: 1pt;
-	}
 }
 
 @media only screen and (min-width: 500px) {
