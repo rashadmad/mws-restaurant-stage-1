@@ -17,8 +17,10 @@ You have been provided the code for a restaurant reviews website. The code has a
 * Node.JS & NPM
 * Gulp
 * Gulp sass for sass preprocessor
-* Autoprefixer
+* Gulp-Autoprefixer
 * fancy log
+* gulp-connect  
+
 
 1. In this folder, start up a simple HTTP server to serve up the site files on your local computer. Python has some simple tools to do this, and you don't even need to know Python. For most people, it's already installed on your computer.
 
