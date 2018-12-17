@@ -1,8 +1,8 @@
-
+@import "_variables";
 @charset "utf-8";
 /* CSS Document */
 /* ====================== primary site parts ====================== */
-$blah: blue;
+
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1em;
@@ -10,7 +10,7 @@ body,td,th,p{
 	line-height: 1.5;
 }
 body {
-	background-color: $blah;
+	background-color: $neutral-light;
 	margin: 0;
 	position:relative;
 }
@@ -19,9 +19,9 @@ ul, li {
 }
 a {
 	img{
-		border: none 0px #fff;
+		border: none 0px $neutral-light;
 	}
-	color: blue;
+	color: $accent-color;
 	text-decoration: none;
 	&:hover{
 		color: blue;
@@ -39,7 +39,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	display: block;
 }
 main {
-  background-color: #f3f3f3;
+  background-color: $neutral-dark;
   width:100%;
   min-height: 100%;
 }
