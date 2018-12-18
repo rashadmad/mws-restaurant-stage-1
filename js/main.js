@@ -158,7 +158,7 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
   const wrapper = document.createElement('div');
   const infoDiv = document.createElement('div');
-  const name = document.createElement('h2');
+  const name = document.createElement('h3');
   const more = document.createElement('a');
   const neighborhood = document.createElement('p');
   const address = document.createElement('p');

@@ -1,3 +1,12 @@
+#restaurants-list li img {
+  width: 100%;
+  height: auto; }
+
+#filter-options label {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important; }
+
 /* CSS Document */
 /* ====================== primary site parts ====================== */
 body, td, th, p {
@@ -13,7 +22,7 @@ body {
   font-family: EB Garamond, serif;
   font-size: 1em;
   line-height: 1.5;
-  background-color: white;
+  background-color: #f3f3f3;
   margin: 0;
   position: relative; }
 
@@ -23,7 +32,7 @@ ul, li {
 a {
   text-decoration: none; }
   a img {
-    border: none 0px white; }
+    border: none 0px #f3f3f3; }
   a:hover {
     color: blue;
     text-decoration: none; }
@@ -35,7 +44,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   display: block; }
 
 main {
-  background-color: white;
+  background-color: #f3f3f3;
   width: 100%;
   min-height: 100%; }
 
@@ -73,7 +82,7 @@ header {
       header nav h1 a {
         color: white !important;
         text-transform: uppercase !important;
-        color: white !important;
+        color: white;
         font-family: Oswald, sans-serif;
         font-size: 1em;
         line-height: 1.5;
@@ -92,10 +101,10 @@ header {
     display: inline;
     /* Add a color to all links inside the list */ }
     #breadcrumb li a {
-      color: orange;
+      color: blue;
       text-decoration: none; }
     #breadcrumb li:hover {
-      color: #01447e;
+      color: orange;
       text-decoration: underline; }
 
 /* Add a slash symbol (/) before/behind each list item */
@@ -106,14 +115,16 @@ header {
 
 /* ====================== Home Map ====================== */
 #map {
+  margin-top: 80px;
   height: 400px;
   width: 100%;
-  background-color: #ccc; }
+  background-color: orange; }
   #map #map-container {
     background: blue none repeat scroll 0 0;
     height: auto;
     right: 0;
     top: 80px;
+    margin-top: 20px;
     width: 100%; }
 
 /* ====================== Detailed Map ====================== */
@@ -131,31 +142,21 @@ header {
   #filter-options h2 {
     color: white !important;
     text-transform: none !important;
-    color: white !important;
     font-family: Oswald, sans-serif;
-    font-size: 1em;
-    line-height: 1.5;
-    font-weight: 200;
-    letter-spacing: 7px;
+    font-size: 1.3em;
+    font-weight: 30;
+    line-height: 1.2;
+    letter-spacing: 2px;
     margin-left: 10px; }
   #filter-options select {
-    color: black !important;
-    text-transform: none !important;
-    font-family: EB Garamond, serif;
-    font-size: 1em;
-    line-height: 1.5;
-    background-color: white;
+    background-color: #f3f3f3;
     border: 1px solid #fff;
     height: 35px;
     margin: 10px;
     padding: 0 10px;
     width: 95%; }
-  #filter-options label {
-    position: absolute !important;
-    top: -9999px !important;
-    left: -9999px !important; }
 
-/* ====================== Restaurant Listing ====================== */
+/* ====================== Restaurant Listing//HOME PAGE ====================== */
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -163,18 +164,25 @@ header {
   padding: 30px 15px 60px;
   text-align: center; }
   #restaurants-list .info {
-    margin-top: 10px;
-    margin-bottom: 10px; }
+    height: 90px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 5px; }
   #restaurants-list li {
     background-color: white;
     border: 2px solid #ccc;
     margin: 10px;
     padding: 12px; }
-    #restaurants-list li img {
-      width: 100%;
-      height: auto; }
+    #restaurants-list li p {
+      color: black !important;
+      text-transform: none !important;
+      font-family: EB Garamond, serif;
+      font-size: 1em;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0; }
     #restaurants-list li a {
-      color: white !important;
+      color: #f3f3f3 !important;
       text-transform: uppercase !important;
       font-family: Oswald, sans-serif;
       font-size: .8em;
@@ -187,17 +195,14 @@ header {
       padding: 8px;
       text-decoration: none;
       margin-bottom: 0; }
-    #restaurants-list li h2 {
-      color: black !important;
+    #restaurants-list li h3 {
+      color: blue !important;
       text-transform: none !important;
-      font-family: Oswald, sans-serif;
-      font-size: 1.7em;
-      font-weight: 900;
-      letter-spacing: 2px;
-      line-height: 1; }
-    #restaurants-list li p {
+      font-family: EB Garamond, serif;
       margin: 0;
-      font-size: 11pt; }
+      font-size: 1.5em;
+      line-height: 1.2;
+      margin-bottom: 10px; }
   #restaurants-list .restaurant-img {
     background-color: #ccc;
     display: block;
@@ -218,7 +223,7 @@ header {
 #restaurant-container table td {
   color: black !important;
   text-transform: none !important;
-  color: white !important;
+  color: white;
   font-family: Oswald, sans-serif;
   font-size: 1em;
   line-height: 1.5;
@@ -232,12 +237,12 @@ header {
   color: black !important;
   text-transform: none !important;
   font-family: Oswald, sans-serif;
-  font-size: 1.7em;
-  font-weight: 900;
+  font-size: 1.3em;
+  font-weight: 30;
+  line-height: 1.2;
   letter-spacing: 2px;
-  line-height: 1;
   text-align: center;
-  margin: 20px 5px 20px 5px; }
+  margin: 35px 5px 20px 5px; }
 
 #restaurant-container img {
   height: auto;
@@ -254,18 +259,24 @@ header {
   background-color: #252831;
   padding: 2px 0;
   text-align: center; }
+  #restaurant-container #restaurant-cuisine h3 {
+    color: #f3f3f3 !important;
+    text-transform: none !important;
+    font-family: EB Garamond, serif;
+    font-size: 1em;
+    letter-spacing: 3px;
+    font-weight: 900;
+    line-height: 1.5;
+    display: none; }
 
 #restaurant-container #reviews-list {
   margin: 0;
   padding: 0; }
   #restaurant-container #reviews-list li {
-    background-color: #fff;
-    border: 2px solid #f3f3f3;
-    display: block;
-    list-style-type: none;
-    margin: 0 0 30px;
-    padding: 15px;
-    position: relative; }
+    background-color: white;
+    border: 2px solid #ccc;
+    margin: 10px;
+    padding: 12px; }
     #restaurant-container #reviews-list li p {
       margin: 0 0 10px; }
 

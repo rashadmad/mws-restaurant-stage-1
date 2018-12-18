@@ -3,7 +3,7 @@ color: $color !important;
 text-transform: $text !important;
 
     @if $element == 'h1'{
-      color: white !important;
+      color: white;
       font-family: $header-fontStack;
       font-size: 1em;
       line-height: 1.5;
@@ -11,19 +11,30 @@ text-transform: $text !important;
       letter-spacing: 7px;
     } @elseif $element == 'h2'{
       font-family: $header-fontStack;
-      font-size: 1.7em;
-      font-weight: 900;
+      font-size: 1.3em;
+      font-weight: 30;
+      line-height: 1.2;
       letter-spacing: 2px;
-      line-height: 1;
     } @elseif $element == 'h3'{
-      font-family: $header-fontStack;
+      font-family: $primary-fontStack;
+      margin: 0;
+      font-size: 1.5em;
+      line-height: 1.2;
+    } @elseif $element == 'h3_special'{
+      font-family: $primary-fontStack;
       font-size: 1em;
+      letter-spacing: 3px;
+      font-weight: 900;
       line-height: 1.5;
     } @elseif $element == 'body'{
       font-family: $primary-fontStack;
       font-size: 1em;
       line-height: 1.5;
     } @elseif $element == 'p'{
+      font-family: $primary-fontStack;
+      font-size: 1em;
+      line-height: 1.5;
+    } @elseif $element == 'p_italic'{
       font-family: $primary-fontStack;
       font-size: 1em;
       line-height: 1.5;
