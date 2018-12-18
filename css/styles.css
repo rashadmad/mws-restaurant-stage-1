@@ -78,9 +78,6 @@ header {
         font-size: 1em;
         line-height: 1.5;
         font-weight: 200;
-        letter-spacing: 7px;
-        font-size: 14pt;
-        font-weight: 200;
         letter-spacing: 7px; }
 
 /* Display list items side by side */
@@ -142,12 +139,14 @@ header {
     letter-spacing: 7px;
     margin-left: 10px; }
   #filter-options select {
+    color: black !important;
+    text-transform: none !important;
+    font-family: EB Garamond, serif;
+    font-size: 1em;
+    line-height: 1.5;
     background-color: white;
     border: 1px solid #fff;
-    font-family: Arial,sans-serif;
-    font-size: 11pt;
     height: 35px;
-    letter-spacing: 0;
     margin: 10px;
     padding: 0 10px;
     width: 95%; }
@@ -171,6 +170,9 @@ header {
     border: 2px solid #ccc;
     margin: 10px;
     padding: 12px; }
+    #restaurants-list li img {
+      width: 100%;
+      height: auto; }
     #restaurants-list li a {
       color: white !important;
       text-transform: uppercase !important;
