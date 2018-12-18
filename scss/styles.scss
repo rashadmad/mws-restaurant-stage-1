@@ -129,12 +129,11 @@ header {
   align-items: center;
   padding: 10px;
 	h2 {
-		@include fontSystem(h1);
-		color: white;
+		@include fontSystem(h1,$color:white);
 	  margin-left: 10px;
 	}
 	select {
-		background-color: white;
+		background-color: $neutral-light;
 	  border: 1px solid #fff;
 	  font-family: Arial,sans-serif;
 	  font-size: 11pt;

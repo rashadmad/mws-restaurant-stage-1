@@ -132,7 +132,7 @@ header {
   align-items: center;
   padding: 10px; }
   #filter-options h2 {
-    color: black !important;
+    color: white !important;
     text-transform: none !important;
     color: white !important;
     font-family: Oswald, sans-serif;
@@ -140,7 +140,6 @@ header {
     line-height: 1.5;
     font-weight: 200;
     letter-spacing: 7px;
-    color: white;
     margin-left: 10px; }
   #filter-options select {
     background-color: white;
