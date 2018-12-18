@@ -1,0 +1,114 @@
+/*colors*/
+$primary_color: blue;
+$primary_color_inverse: orange;
+$base_color: #252831;
+$card_color: #f3f3f3;
+$base_font_color: #333;
+$dropShadow_color: #888888;
+$white: #fff;
+$shadow_color_dark: #0f1011;
+
+/*fonts*/
+$Primary_font: 'Rubik', sans-serif;
+$secondary_font: 'Karla', sans-serif;
+
+/*media queris*/
+$breakpoint-mobile: 450px;
+$breakpoint-tablet: 600px;
+$breakpoint-desktop: 750px;
+$breakpoint-desktop-XL: 1000px;
+
+
+@mixin fontStack($font,$element,$inverse:null) {
+  font-family: $font;
+  @if $font == $Primary_font {
+    @if $element == 'h1' {
+      font-size: 1.2em;
+      font-weight: 300;
+      line-height: 1.2;
+      color: $primary_color;
+      @if $inverse {
+        color: $card_color;
+      }
+    } @else
+    if $element == 'h2' {
+      font-size: 1.3em;
+      font-weight: 600;
+      line-height: 1.5;
+      color: $primary_color;
+      @if $inverse {
+        color: $card_color;
+      }
+    } @else
+    if $element == 'h3' {
+      font-size: 1.1em;
+      font-weight: 400;
+      line-height: 1.2;
+      color: $primary_color;
+      @if $inverse {
+        color: $card_color;
+      }
+    } @else
+    if $element == 'button' {
+      font-size: 1em;
+      font-weight: 300;
+      line-height: 1.2;
+      color: $primary_color;
+      @if $inverse {
+        color: $card_color;
+      }
+    }
+  } @else
+  if $font == $secondary_font {
+    @if $element == 'basic' {
+      font-size: 1em;
+      line-height: 1;
+      color: $base_font_color;
+      @if $inverse {
+        color: $card_color;
+      }
+    } @else
+    if $element == 'quote' {
+      font-size: .9em;
+      font-style: italic;
+      line-height: 1.6;
+      color: $base_font_color;
+      @if $inverse {
+        color: $card_color;
+      }
+    }
+  }
+}
+/*tools*/
+
+%clear_fix {
+  overflow: auto;
+}
+/*spacing*/
+
+%default_spaceing {
+  padding: 20px 0;
+}
+
+%responsive_image {
+  width: 100%;
+  height: auto;
+}
+@mixin dropShadow($EW:5px,$NS:10px,$spread:8px,$color:$dropShadow_color,$display:'yes') {
+  box-shadow: $EW $NS $spread $color;
+  @if $display == 'none' {
+    box-shadow: none;
+  }
+}
+@mixin maxOut($W,$H) {
+  @if $W {
+    width: 100%;
+  } @else
+  if $H {
+    height: 100%;
+  } @else {
+    @warn 'For this mixin to work you need to add a true value to $W and/or $H.';
+    @debug $W;
+    @debug $H;
+  }
+}
