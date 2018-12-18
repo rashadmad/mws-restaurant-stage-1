@@ -1,0 +1,36 @@
+@mixin fontSystem($element:body,$color:$base-font-color,$text:none){
+color: $color !important;
+text-transform: $text !important;
+
+    @if $element == 'h1'{
+      color: white !important;
+      font-family: $header-fontStack;
+      font-size: 1em;
+      line-height: 1.5;
+      font-weight: 200;
+      letter-spacing: 7px;
+    } @elseif $element == 'h2'{
+      font-family: $header-fontStack;
+      font-size: 1.7em;
+      font-weight: 900;
+      letter-spacing: 2px;
+      line-height: 1;
+    } @elseif $element == 'h3'{
+      font-family: $header-fontStack;
+      font-size: 1em;
+      line-height: 1.5;
+    } @elseif $element == 'body'{
+      font-family: $primary-fontStack;
+      font-size: 1em;
+      line-height: 1.5;
+    } @elseif $element == 'p'{
+      font-family: $primary-fontStack;
+      font-size: 1em;
+      line-height: 1.5;
+    } @elseif $element == 'button'{
+      font-family: $header-fontStack;
+      font-size: .8em;
+      line-height: 1.5;
+      letter-spacing: 4px;
+    }
+  }
