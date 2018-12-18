@@ -35,7 +35,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   display: block; }
 
 main {
-  background-color: #252831;
+  background-color: white;
   width: 100%;
   min-height: 100%; }
 
@@ -49,6 +49,12 @@ footer {
   background-color: #252831;
   padding: 25px;
   text-align: center; }
+  footer a {
+    color: orange !important;
+    text-transform: none !important;
+    font-family: EB Garamond, serif;
+    font-size: 1em;
+    line-height: 1.5; }
 
 /* ====================== Navigation ====================== */
 header {
@@ -89,7 +95,7 @@ header {
     display: inline;
     /* Add a color to all links inside the list */ }
     #breadcrumb li a {
-      color: #0275d8;
+      color: orange;
       text-decoration: none; }
     #breadcrumb li:hover {
       color: #01447e;
@@ -178,7 +184,8 @@ header {
       border-bottom: 3px solid #eee;
       display: inline-block;
       padding: 8px;
-      text-decoration: none; }
+      text-decoration: none;
+      margin-bottom: 0; }
     #restaurants-list li h2 {
       color: black !important;
       text-transform: none !important;
@@ -300,7 +307,7 @@ header {
     object-fit: cover;
     width: 320px;
     height: 180px;
-    background-color: #ccc;
+    background-color: white;
     display: block;
     margin: 0; }
   table {

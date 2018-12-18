@@ -35,7 +35,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	display: block;
 }
 main {
-  background-color: $neutral-dark;
+  background-color: $neutral-light;
   width:100%;
   min-height: 100%;
 }
@@ -45,6 +45,9 @@ footer {
   background-color: $neutral-dark;
   padding: 25px;
   text-align: center;
+	a {
+		@include fontSystem(body,$color:$accent-contrast);
+	}
 }
 
 /* ====================== Navigation ====================== */
@@ -84,7 +87,7 @@ header {
 			 display: inline;
 			 /* Add a color to all links inside the list */
 			 a {
-			     color: #0275d8;
+			     color: $accent-contrast;
 			     text-decoration: none;
 			 } &:hover {
 				 color: #01447e;
@@ -303,7 +306,7 @@ header {
 		object-fit: cover;
   	width: 320px;
   	height: 180px;
-	  background-color: $card-color:;
+	  background-color: $card-color;
 	  display: block;
 	  margin: 0;
 	}
