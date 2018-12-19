@@ -58,12 +58,15 @@ header {
   top: 0;
   width: 100%;
   z-index: 2000;
+	@extend %drop-shadow;
 	nav {
 	  width: 100%;
 	  height: auto;
 	  background-color: #252831;
 	  text-align:center;
 	  padding: 20px 0;
+		ul {
+		}
 		h1 {
 		  margin: auto;
 			a {
@@ -76,7 +79,8 @@ header {
 
 /* Display list items side by side */
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 10px;
+		padding-left: 20px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
@@ -155,8 +159,8 @@ header {
 	padding: 10px;
 	text-align: center;
 	.info{
-		height: 90px;
-		margin-top: 5px;
+		height: 110px;
+		margin-top: 0px;
 		margin-bottom: 15px;
 		padding:5px;
 	}
@@ -175,10 +179,10 @@ header {
 			@extend %responsive-img;
 		}
 		a {
+			@extend %drop-shadow;
 			@include fontSystem(button,$color:$neutral-light,$text:uppercase);
 			margin-top: 10px;
 		  background-color: blue;
-		  border-bottom: 3px solid #eee;
 		  display: inline-block;
 		  padding: 8px;
 		  text-decoration: none;
@@ -199,26 +203,37 @@ header {
 }
 /* ====================== Restaurant hero details ====================== */
 #restaurant-container {
+	#restaurant-name {
+		@include fontSystem(h2,$color:white);
+		background-color: $accent-color;
+		padding: 14px;
+		text-align: center;
+		margin: 0;
+	}
+	#restaurant-cuisine {
+		@include fontSystem(p_italic,$color:white);
+	  background-color: $neutral-dark;
+	  text-align: center;
+		h3 {
+			margin: 0;
+		}
+	}
 	table {
 		th{
-			color: blue;
-			text-align: left;
+			@include fontSystem(h3,$color:$accent-color);
+			text-align: center;
 			letter-spacing: -1px;
-			padding-bottom: 1pt;
+			padding: 15px;
 			margin: 10px;
 			width: 100%;
-			text-align: center;
 		}
 		td {
-			@include fontSystem(h1);
-		  padding: 5px;
+			@include fontSystem(p_italic,$color:$neutral-light);
+			font-style: italic;
+			padding: 5px;
 		  background-color: #252831;
 		  width: 250px;
 		}
-	}
-	h2 {
-		@include fontSystem(h2);
-		text-align:center;
 	}
 	img {
 		height: auto;
@@ -226,47 +241,60 @@ header {
 		min-width: 350px;
 	  text-align: center;
 	}
-	#restaurant-address {
-		text-algn: center;
-	  margin-top: 8px;
-	  text-align: center;
-	}
-	#restaurant-cuisine {
-	  background-color: $neutral-dark;
-	  padding: 2px 0;
-	  text-align: center;
-		h3 {
-			@include fontSystem(h3_special,$color:$neutral-light);
-			display: none;
-		}
-	}
-	#reviews-list {
-	  margin: 0;
-	  padding: 0;
-		li{
-			background-color: $card-color;
-		  border: 2px solid #ccc;
-		  margin: 10px;
-		  padding: 12px;
 
-			p{
-				margin: 0 0 10px;
-			}
-		}
-	}
 	#address-container{
 		text-algin: center;
 	}
-	#reviews-container {
-		h2 {
-		  padding-bottom: 1px;
-		}
+}
+#reviews-container {
+	h4 {
+		@include fontSystem(h4);
+		margin: 15px 0;
+		padding-bottom: 1px;
+	}
+
+	h3 {
+		@include fontSystem(h2,$color:white);
+		background-color: $accent-color;
+		padding: 10px;
+		padding-bottom: 10px;
+		text-align: left;
 	}
 }
-
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
+}
+
+#reviews-list {
+	margin: 0;
+	padding: 0 !important;
+
+	li{
+		background-color: $card-color;
+		border: 2px solid #ccc;
+		margin: 10px;
+		padding: 12px;
+
+		p{
+			margin: 0 0 10px;
+		}
+		.date {
+			display: none;
+			color: $accent-color;
+		}
+		.comments {
+			@include fontSystem(p_italic);
+		}
+
+	}
+}
+
+#restaurant-address {
+	text-algn: center;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	text-align: center;
 }
 
 @media only screen and (min-width: 500px) {
