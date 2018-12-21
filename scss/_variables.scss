@@ -6,6 +6,13 @@ $neutral-dark: #252831;
 $neutral-light: #f3f3f3;
 $base-font-color: black;
 
+$drop-shadow-color: #888888;
+
 //fonts
 $header-fontStack: Oswald, sans-serif;
 $primary-fontStack: EB Garamond, serif;
+
+//responsive
+$tablet-break-point: 600px;
+$desktop-break-point: 800px;
+$desktopXL-break-point: 1000px;
