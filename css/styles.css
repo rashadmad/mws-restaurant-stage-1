@@ -146,6 +146,7 @@ header {
 
 /* ====================== Restaurant Filtering ====================== */
 #filter-options {
+  z-index: 3000;
   display: grid;
   background-color: blue;
   -webkit-box-align: center;
@@ -281,7 +282,6 @@ header {
   text-align: center; }
 
 #restaurant-container #address-container {
-  width: 100%;
   text-algin: center; }
 
 #reviews-container {
@@ -314,7 +314,7 @@ header {
 
 #reviews-list {
   margin: 0;
-  padding: 0 !important; }
+  padding: 0; }
   #reviews-list li {
     background-color: white;
     border: 2px solid #ccc;
@@ -370,7 +370,8 @@ header {
     #restaurant-container #address-container {
       grid-column-start: 1;
       grid-column-end: 3;
-      grid-row-start: 4; }
+      grid-row-start: 4;
+      height: auto; }
   #filter-options {
     display: block;
     overflow: hidden; }
@@ -388,11 +389,12 @@ header {
     #restaurants-list #restaurant-img {
       width: 50%; }
     #restaurants-list .info {
-      height: 130px; }
-    #restaurants-list table {
-      width: 50%; } }
+      height: 130px; } }
 
 @media only screen and (min-width: 800px) {
+  #restaurant-container {
+    display: grid;
+    grid-template-columns: auto auto; }
   #filter-options select {
     width: 150px; }
   #restaurants-list {
@@ -405,24 +407,39 @@ header {
     background-color: white;
     display: block;
     margin: 0; }
-  table {
-    height: 100%; }
   #restaurant-container {
+    -webkit-box-shadow: 1px 12px 13px #888888;
+    box-shadow: 1px 12px 13px #888888;
     margin-left: 10%;
     margin-right: 10%; }
+    #restaurant-container table {
+      width: 300px; }
+      #restaurant-container table th {
+        max-height: 30px; }
     #restaurant-container img {
-      height: 100%; }
-  table {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    height: auto; }
-  .address-container {
-    grid-column-end: 4;
-    grid-row-start: 4; } }
+      width: 100%;
+      height: auto; }
+  #reviews-list {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0; } }
 
 @media only screen and (min-width: 1000px) {
   #restaurants-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-left: 10%;
-    margin-right: 10%; } }
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
+  #reviews-list {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 0; }
+  #address-container {
+    background-color: #f3f3f3;
+    margin: 0; }
+  #restaurant-container {
+    background-color: #252831;
+    margin-left: 15%;
+    margin-right: 15%; }
+    #restaurant-container img {
+      max-width: 100%; }
+    #restaurant-container table {
+      height: 200px; } }

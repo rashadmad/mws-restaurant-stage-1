@@ -56,7 +56,7 @@ footer {
 header {
   position: fixed;
   top: 0;
-  width: 100%;
+	width: 100%;
   z-index: 2000;
 	@extend %drop-shadow-right;
 	nav {
@@ -130,6 +130,7 @@ header {
 /* ====================== Restaurant Filtering ====================== */
 #filter-options {
 	@extend %drop-shadow-right;
+	z-index: 3000;
   display: grid;
   background-color: blue;
   align-items: center;
@@ -250,7 +251,7 @@ header {
 	}
 
 	#address-container{
-		width: 100%;
+
 		text-algin: center;
 	}
 }
@@ -279,7 +280,7 @@ header {
 
 #reviews-list {
 	margin: 0;
-	padding: 0 !important;
+	padding: 0;
 
 	li{
 		background-color: $card-color;
@@ -348,6 +349,7 @@ header {
 			grid-column-start: 1;
 			grid-column-end: 3;
 			grid-row-start: 4;
+			height: auto;
 		}
 	}
 	#filter-options{
@@ -375,13 +377,14 @@ header {
 			.info{
 				height: 130px;
 			}
-			table{
-				width: 50%;
-			}
-		}
+	 }
 }
 
 @media only screen and (min-width: $desktop-break-point){
+	#restaurant-container {
+		display: grid;
+		grid-template-columns: auto auto;
+	}
 	#filter-options select {
 		 width: 150px;
 	}
@@ -396,24 +399,26 @@ header {
 	  display: block;
 	  margin: 0;
 	}
-	table {
-		height: 100%;
-	}
+
 	#restaurant-container{
+		box-shadow: 1px 12px 13px $drop-shadow-color;
 		margin-left: 10%;
 		margin-right: 10%;
+		table {
+			width: 300px;
+			th {
+				max-height: 30px;
+			}
+		}
 		img {
-			height: 100%;
+			width: 100%;
+			height: auto;
 		}
 	}
-	table{
-		grid-column-start: 2;
-  	grid-column-end: 4;
-		height: auto;
-	}
-	.address-container{
-  	grid-column-end: 4;
-		grid-row-start: 4;
+	#reviews-list{
+		margin-left: 10%;
+		margin-right: 10%;
+		padding: 0;
 	}
 }
 
@@ -422,7 +427,26 @@ header {
 	#restaurants-list{
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
-		margin-left: 10%;
-		margin-right: 10%;
+
+	}
+	#reviews-list{
+		margin-left: 20%;
+		margin-right: 20%;
+		padding: 0;
+	}
+	#address-container{
+		background-color: $neutral-light;
+		margin:0;
+	}
+	#restaurant-container{
+		background-color: $neutral-dark;
+		margin-left: 15%;
+		margin-right: 15%;
+		img{
+			max-width: 100%
+		}
+		table{
+			height:200px;
+		}
 	}
 }
