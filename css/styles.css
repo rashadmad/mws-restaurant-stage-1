@@ -413,6 +413,7 @@ header {
     margin-left: 10%;
     margin-right: 10%; }
     #restaurant-container table {
+      background-color: white;
       width: 300px; }
       #restaurant-container table th {
         max-height: 30px; }
