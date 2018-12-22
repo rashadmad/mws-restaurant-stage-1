@@ -75,6 +75,50 @@ fetchRestaurantFromURL = (callback) => {
     });
   }
 }
+const image = document.getElementById('restaurant-img');
+const name = document.getElementById('restaurant-name');
+const address = document.getElementById('restaurant-address');
+
+class RestaurantBlock {
+    constructor(img, name, city, address, hours) {
+      this.img = img;
+      this.name = name;
+      this.city = city;
+      this.address = address;
+  }
+  creatImg() {
+    image.className = 'restaurant-img'
+    image.src = this.img;
+  }
+  createName() {
+    name.innerHTML = this.name;
+    return name;
+  }
+  createAddress() {
+    address.innerHTML = "<p>" + "Address:  " + this.address + "</p>";
+    return address;
+  }
+  createHours() {
+      if (restaurant.operating_hours) {
+        const hours = document.getElementById('restaurant-hours');
+
+          for (let key in operatingHours) {
+            const row = document.createElement('tr');
+
+            const day = document.createElement('td');
+            day.innerHTML = key;
+            row.appendChild(day);
+
+            const time = document.createElement('td');
+            time.innerHTML = hours;
+            row.appendChild(time);
+
+            hours.appendChild(row);
+          }
+    }
+  }
+}
+
 
 /**
  * Create restaurant HTML and add it to the webpage
