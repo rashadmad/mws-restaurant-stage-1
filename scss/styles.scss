@@ -2,6 +2,7 @@
 @import "_toolKit.scss";
 @import "_fonts";
 @charset "utf-8";
+
 /* CSS Document */
 /* ====================== primary site parts ====================== */
 
@@ -292,7 +293,6 @@ header {
 			margin: 0 0 10px;
 		}
 		.date {
-			display: none;
 			color: $accent-color;
 		}
 		.comments {
@@ -301,7 +301,10 @@ header {
 
 	}
 }
-
+.rating-container{
+	color: $accent-contrast;
+	margin: 20px, 20px, 20px, 40px;
+}
 #restaurant-address {
 	text-algn: center;
 	margin-top: 8px;

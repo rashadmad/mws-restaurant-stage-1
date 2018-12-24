@@ -150,6 +150,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  * Create review HTML and add it to the webpage.
  */
 createReviewHTML = (review) => {
+  
   //create li box to cotain reviews
   const li = document.createElement('li');
   //reviers name
@@ -160,17 +161,18 @@ createReviewHTML = (review) => {
   li.appendChild(name);
 
   const ratingDiv = document.createElement('div');
-  const rating = review.rating;
+  ratingDiv.classList.add("rating-container");
   const starsMax = 5;
+  let score = review.rating;
   let stars = [];
 
   for(i = 0; i < starsMax; i++){
-    let score = rating;
+
     if (score > 0){
-      stars.push('<i class="fas fa-star fa-5x"></i>');
+      stars.push('<i class="fas fa-star fa-2x"></i>');
       score--;
-    } else {
-      stars.push('<i class="far fa-star fa-5x"></i>');
+    } else{
+      stars.push('<i class="far fa-star fa-2x"></i>');
       score--;
     }
   }

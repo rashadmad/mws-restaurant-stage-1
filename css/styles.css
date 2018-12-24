@@ -323,7 +323,6 @@ header {
     #reviews-list li p {
       margin: 0 0 10px; }
     #reviews-list li .date {
-      display: none;
       color: blue; }
     #reviews-list li .comments {
       color: black !important;
@@ -331,6 +330,10 @@ header {
       font-family: EB Garamond, serif;
       font-size: 1em;
       line-height: 1.5; }
+
+.rating-container {
+  color: orange;
+  margin: 20px, 20px, 20px, 40px; }
 
 #restaurant-address {
   text-algn: center;
