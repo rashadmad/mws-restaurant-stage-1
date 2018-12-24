@@ -5,14 +5,14 @@ let restaurants,
 var newMap
 var markers = []
 
-if('serviceWorker' in navigator){
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js')
-    .catch(function(err) {
-      console.error(err);
-    });
-  });
-}
+// if('serviceWorker' in navigator){
+//   window.addEventListener('load', function() {
+//     navigator.serviceWorker.register('/sw.js')
+//     .catch(function(err) {
+//       console.error(err);
+//     });
+//   });
+// }
 
 
 /**
