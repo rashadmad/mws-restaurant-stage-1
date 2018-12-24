@@ -1,8 +1,19 @@
+console.log("main.js working");
 let restaurants,
   neighborhoods,
   cuisines
 var newMap
 var markers = []
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js')
+    .catch(function(err) {
+      console.error(err);
+    });
+  });
+}
+
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
