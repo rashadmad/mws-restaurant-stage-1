@@ -8,6 +8,7 @@
 
 body,td,th,p{
 	@include fontSystem(body);
+	background-color: $accent-contrast;
 }
 body {
 	@include fontSystem(body);

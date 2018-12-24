@@ -26,7 +26,8 @@ body, td, th, p {
   text-transform: none !important;
   font-family: EB Garamond, serif;
   font-size: 1em;
-  line-height: 1.5; }
+  line-height: 1.5;
+  background-color: orange; }
 
 body {
   color: black !important;
