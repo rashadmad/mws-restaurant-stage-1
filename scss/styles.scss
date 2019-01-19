@@ -8,7 +8,6 @@
 
 body,td,th,p{
 	@include fontSystem(body);
-	background-color: $accent-contrast;
 }
 body {
 	@include fontSystem(body);
@@ -64,7 +63,7 @@ header {
 	nav {
 	  width: 100%;
 	  height: auto;
-	  background-color: #252831;
+	  background-color: $accent-color;
 	  text-align:center;
 	  padding: 20px 0;
 		ul {
@@ -115,7 +114,7 @@ header {
   width: 100%;
   background-color: $accent-contrast;
 	#map-container {
-	  background: blue none repeat scroll 0 0;
+	  background: $accent-color none repeat scroll 0 0;
 	  height: auto;
 	  right: 0;
 	  top: 80px;
@@ -134,7 +133,7 @@ header {
 	@extend %drop-shadow-right;
 	z-index: 3000;
   display: grid;
-  background-color: blue;
+  background-color: $accent-color;
   align-items: center;
   padding: 10px;
 	h2 {
@@ -143,7 +142,7 @@ header {
 		margin-top: 0;
 	}
 	select {
-		@extend %inner-drop-shadow;
+		@include fontSystem(selectField);
 		background-color: $neutral-light;
 	  border: 1px solid #fff;
 	  height: 35px;
@@ -165,13 +164,12 @@ header {
 	padding: 10px;
 	text-align: center;
 	.info{
-		height: 110px;
 		margin-top: 0px;
 		margin-bottom: 15px;
 		padding:5px;
 	}
 	li {
-		@extend %drop-shadow-right;
+		@extend %drop-shadow-flat;
 	  background-color: $card-color;
 	  border: 2px solid #ccc;
 	  margin: 10px;
@@ -185,10 +183,9 @@ header {
 			@extend %responsive-img;
 		}
 		a {
-			@extend %drop-shadow-right;
 			@include fontSystem(button,$color:$neutral-light,$text:uppercase);
 			margin-top: 10px;
-		  background-color: blue;
+		  background-color: $accent-color;
 		  display: inline-block;
 		  padding: 8px;
 		  text-decoration: none;

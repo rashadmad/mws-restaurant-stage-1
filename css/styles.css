@@ -7,17 +7,13 @@
   top: -9999px !important;
   left: -9999px !important; }
 
-header, #filter-options, #restaurants-list li, #restaurants-list li a, #reviews-container h3 {
+header, #filter-options, #reviews-container h3 {
   -webkit-box-shadow: 5px 2px 6px #888888;
   box-shadow: 5px 2px 6px #888888; }
 
-#restaurants-list {
-  -webkit-box-shadow: 1px 12px 13px #888888;
-  box-shadow: 1px 12px 13px #888888; }
-
-#filter-options select {
-  -webkit-box-shadow: inset 0 0 15px #888888;
-  box-shadow: inset 0 0 15px #888888; }
+#restaurants-list, #restaurants-list li {
+  -webkit-box-shadow: 1px 2px 6px #888888;
+  box-shadow: 1px 2px 6px #888888; }
 
 /* CSS Document */
 /* ====================== primary site parts ====================== */
@@ -26,8 +22,7 @@ body, td, th, p {
   text-transform: none !important;
   font-family: EB Garamond, serif;
   font-size: 1em;
-  line-height: 1.5;
-  background-color: orange; }
+  line-height: 1.5; }
 
 body {
   color: black !important;
@@ -47,10 +42,10 @@ a {
   a img {
     border: none 0px #f3f3f3; }
   a:hover {
-    color: blue;
+    color: #3572c3;
     text-decoration: none; }
   a:focus {
-    color: blue;
+    color: #3572c3;
     text-decoration: none; }
 
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -87,7 +82,7 @@ header {
   header nav {
     width: 100%;
     height: auto;
-    background-color: #252831;
+    background-color: #3572c3;
     text-align: center;
     padding: 20px 0; }
     header nav h1 {
@@ -115,7 +110,7 @@ header {
     display: inline;
     /* Add a color to all links inside the list */ }
     #breadcrumb li a {
-      color: blue;
+      color: #3572c3;
       text-decoration: none; }
     #breadcrumb li:hover {
       color: orange;
@@ -134,7 +129,7 @@ header {
   width: 100%;
   background-color: orange; }
   #map #map-container {
-    background: blue none repeat scroll 0 0;
+    background: #3572c3 none repeat scroll 0 0;
     height: auto;
     right: 0;
     top: 80px;
@@ -149,7 +144,7 @@ header {
 #filter-options {
   z-index: 3000;
   display: grid;
-  background-color: blue;
+  background-color: #3572c3;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -165,6 +160,13 @@ header {
     margin-left: 10px;
     margin-top: 0; }
   #filter-options select {
+    color: black !important;
+    text-transform: none !important;
+    font-family: Oswald, sans-serif;
+    font-size: .8em;
+    font-weight: 30;
+    line-height: 1.5;
+    letter-spacing: 2px;
     background-color: #f3f3f3;
     border: 1px solid #fff;
     height: 35px;
@@ -180,7 +182,6 @@ header {
   padding: 10px;
   text-align: center; }
   #restaurants-list .info {
-    height: 110px;
     margin-top: 0px;
     margin-bottom: 15px;
     padding: 5px; }
@@ -205,13 +206,13 @@ header {
       line-height: 1.5;
       letter-spacing: 4px;
       margin-top: 10px;
-      background-color: blue;
+      background-color: #3572c3;
       display: inline-block;
       padding: 8px;
       text-decoration: none;
       margin-bottom: 0; }
     #restaurants-list li h3 {
-      color: blue !important;
+      color: #3572c3 !important;
       text-transform: none !important;
       font-family: EB Garamond, serif;
       font-size: 1.5em;
@@ -233,7 +234,7 @@ header {
   font-weight: 30;
   line-height: 1.5;
   letter-spacing: 2px;
-  background-color: blue;
+  background-color: #3572c3;
   padding: 14px;
   padding-bottom: 20px;
   text-align: center;
@@ -255,7 +256,7 @@ header {
   width: 100%;
   height: auto; }
   #restaurant-container table th {
-    color: blue !important;
+    color: #3572c3 !important;
     text-transform: none !important;
     font-family: EB Garamond, serif;
     font-size: 1.5em;
@@ -304,7 +305,7 @@ header {
     font-weight: 30;
     line-height: 1.5;
     letter-spacing: 2px;
-    background-color: blue;
+    background-color: #3572c3;
     padding: 20px 0px 35px 10px;
     margin: 0;
     text-align: left; }
@@ -324,7 +325,7 @@ header {
     #reviews-list li p {
       margin: 0 0 10px; }
     #reviews-list li .date {
-      color: blue; }
+      color: #3572c3; }
     #reviews-list li .comments {
       color: black !important;
       text-transform: none !important;

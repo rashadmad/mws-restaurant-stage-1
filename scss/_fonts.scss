@@ -15,6 +15,12 @@ text-transform: $text !important;
       font-weight: 30;
       line-height: 1.5;
       letter-spacing: 2px;
+    } @elseif $element == 'selectField'{
+      font-family: $header-fontStack;
+      font-size: .8em;
+      font-weight: 30;
+      line-height: 1.5;
+      letter-spacing: 2px;
     } @elseif $element == 'h3'{
       font-family: $primary-fontStack;
       font-size: 1.5em;
