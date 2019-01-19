@@ -57,13 +57,13 @@ main {
   min-height: 100%; }
 
 footer {
-  color: white !important;
+  color: black !important;
   text-transform: none !important;
   font-family: EB Garamond, serif;
   font-size: 1em;
   line-height: 1.5;
   bottom: 0;
-  background-color: #252831;
+  background-color: white;
   padding: 25px;
   text-align: center; }
   footer a {
@@ -175,6 +175,9 @@ header {
     width: 95%; }
 
 /* ====================== Restaurant Listing//HOME PAGE ====================== */
+.list-container {
+  background-color: #afafaf; }
+
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
@@ -189,15 +192,15 @@ header {
     background-color: white;
     border: 2px solid #ccc;
     margin: 10px;
-    padding: 12px; }
-    #restaurants-list li p {
-      color: black !important;
-      text-transform: none !important;
-      font-family: EB Garamond, serif;
-      font-size: 1em;
-      line-height: 1.5;
-      margin: 0;
-      padding: 0; }
+    padding: 12px;
+    max-width: 100px p;
+    max-width-color: black !important;
+    max-width-text-transform: none !important;
+    max-width-font-family: EB Garamond, serif;
+    max-width-font-size: 1em;
+    max-width-line-height: 1.5;
+      max-width-margin: 0;
+      max-width-padding: 0; }
     #restaurants-list li a {
       color: #f3f3f3 !important;
       text-transform: uppercase !important;
@@ -246,7 +249,7 @@ header {
   font-family: EB Garamond, serif;
   font-size: 1em;
   line-height: 1.5;
-  background-color: #252831;
+  background-color: #afafaf;
   text-align: center; }
   #restaurant-container #restaurant-cuisine h3 {
     padding: 20px;
@@ -442,7 +445,7 @@ header {
     background-color: #f3f3f3;
     margin: 0; }
   #restaurant-container {
-    background-color: #252831;
+    background-color: #afafaf;
     margin-left: 15%;
     margin-right: 15%; }
     #restaurant-container img {

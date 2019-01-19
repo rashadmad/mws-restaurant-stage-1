@@ -42,9 +42,9 @@ main {
   min-height: 100%;
 }
 footer {
-	@include fontSystem(body,$color:white);
+	@include fontSystem(body);
   bottom: 0;
-  background-color: $neutral-dark;
+  background-color: $card-color;
   padding: 25px;
   text-align: center;
 	a {
@@ -156,6 +156,10 @@ header {
 }
 
 /* ====================== Restaurant Listing//HOME PAGE ====================== */
+.list-container {
+	background-color: $neutral-dark;
+}
+
 #restaurants-list {
 	@extend %drop-shadow-flat;
 	background-color: $neutral-light;
@@ -174,6 +178,7 @@ header {
 	  border: 2px solid #ccc;
 	  margin: 10px;
 	  padding: 12px;
+		max-width: 100px
 		p {
 			@include fontSystem(p_italic);
 			margin: 0;
