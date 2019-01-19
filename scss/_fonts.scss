@@ -23,7 +23,7 @@ text-transform: $text !important;
       letter-spacing: 2px;
     } @elseif $element == 'h3'{
       font-family: $primary-fontStack;
-      font-size: 1.5em;
+      font-size: 1.2em;
       line-height: 1;
     } @elseif $element == 'h4'{
       font-family: $primary-fontStack;

@@ -168,8 +168,7 @@ header {
 	padding: 10px;
 	text-align: center;
 	.info{
-		margin-top: 0px;
-		margin-bottom: 15px;
+		margin-top: 0;
 		padding:5px;
 	}
 	li {
@@ -177,12 +176,10 @@ header {
 	  background-color: $card-color;
 	  border: 2px solid #ccc;
 	  margin: 10px;
-	  padding: 12px;
-		max-width: 100px
+	  padding-bottom: 12px;
+		max-width: 200px;
 		p {
-			@include fontSystem(p_italic);
 			margin: 0;
-		  padding: 0;
 		}
 		img {
 			@extend %responsive-img;
@@ -198,7 +195,8 @@ header {
 		}
 		h3 {
 			@include fontSystem(h3,$color:$accent-color);
-			margin-bottom: 10px;
+			margin-bottom: 5px;
+			margin-top: 5px;
 		}
 	}
 	.restaurant-img {
@@ -381,7 +379,7 @@ header {
 				width: 50%;
 			}
 			.info{
-				height: 130px;
+				height: 110px;
 			}
 	 }
 }
