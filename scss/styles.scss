@@ -47,7 +47,7 @@ footer {
   padding: 25px;
   text-align: center;
 	a {
-		@include fontSystem(body,$color:$accent-contrast);
+		@include fontSystem(body,$color:$accent-color);
 	}
 }
 
@@ -179,7 +179,10 @@ header {
 		bottom: 10px;
 	  padding-bottom: 12px;
 		max-width: 300px;
-		text-align: center;
+		text-align: left;
+		.info {
+			padding: 15px;
+		}
 		p {
 			margin: 0;
 		}
@@ -188,7 +191,8 @@ header {
 		}
 		a {
 			@include fontSystem(button,$color:$neutral-light,$text:uppercase);
-			margin-top: 10px;
+			float: right;
+			margin: 10px;
 		  background-color: $accent-color;
 		  display: inline-block;
 		  padding: 8px;
@@ -441,10 +445,12 @@ header {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 
+
+			.info {
+				height: 130px;
+			}
 	}
 	#reviews-list{
-		margin-left: 20%;
-		margin-right: 20%;
 		padding: 0;
 	}
 	#address-container{

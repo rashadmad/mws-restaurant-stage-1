@@ -70,7 +70,7 @@ footer {
   padding: 25px;
   text-align: center; }
   footer a {
-    color: orange !important;
+    color: #3572c3 !important;
     text-transform: none !important;
     font-family: EB Garamond, serif;
     font-size: 1em;
@@ -197,7 +197,9 @@ header {
     bottom: 10px;
     padding-bottom: 12px;
     max-width: 300px;
-    text-align: center; }
+    text-align: left; }
+    #restaurants-list li .info {
+      padding: 15px; }
     #restaurants-list li p {
       margin: 0; }
     #restaurants-list li a {
@@ -207,7 +209,8 @@ header {
       font-size: .8em;
       line-height: 1.5;
       letter-spacing: 4px;
-      margin-top: 10px;
+      float: right;
+      margin: 10px;
       background-color: #3572c3;
       display: inline-block;
       padding: 8px;
@@ -440,9 +443,9 @@ header {
   #restaurants-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; }
+    #restaurants-list .info {
+      height: 130px; }
   #reviews-list {
-    margin-left: 20%;
-    margin-right: 20%;
     padding: 0; }
   #address-container {
     background-color: #f3f3f3;
