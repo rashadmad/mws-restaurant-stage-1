@@ -37,7 +37,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 	display: block;
 }
 main {
-  background-color: $neutral-light;
   width:100%;
   min-height: 100%;
 }
@@ -125,6 +124,7 @@ header {
 
 /* ====================== Detailed Map ====================== */
 .review-map #map{
+	background: $neutral-dark;
   margin-top: 115px;
 }
 
@@ -173,10 +173,13 @@ header {
 	}
 	li {
 		@extend %drop-shadow-flat;
+		@extend %card-centering;
 	  background-color: $card-color;
-	  margin: 10px;
+		margin-top: 10px;
+		bottom: 10px;
 	  padding-bottom: 12px;
-		max-width: 200px;
+		max-width: 300px;
+		text-align: center;
 		p {
 			margin: 0;
 		}
@@ -209,7 +212,7 @@ header {
 /* ====================== Restaurant hero details ====================== */
 #restaurant-container {
 	#restaurant-name {
-		@include fontSystem(h2,$color:white);
+		@include fontSystem(h3,$color:white);
 		background-color: $accent-color;
 		padding: 14px;
 		padding-bottom: 20px;
@@ -221,14 +224,14 @@ header {
 	  background-color: $card-color;
 	  text-align: center;
 		h3 {
-			margin: 0;
+			margin: 5px;
 		}
 	}
 	table {
 		width: 100%;
 		height: auto;
 		th{
-			@include fontSystem(h3,$color:$accent-color);
+			@include fontSystem(h3,$color:$base-font-color);
 			text-align: center;
 			letter-spacing: -1px;
 			padding: 15px;
@@ -236,10 +239,10 @@ header {
 			width: 100%;
 		}
 		td {
-			@include fontSystem(p_italic,$color:$neutral-light);
+			@include fontSystem(p_italic,$color:$base-font-color);
 			font-style: italic;
 			padding: 5px;
-		  background-color: #252831;
+		  background-color: $neutral-dark;
 		  width: 250px;
 		}
 	}
@@ -256,6 +259,7 @@ header {
 	}
 }
 #reviews-container {
+	background-color: $neutral-dark;
 	margin-top: 0;
 	margin-bottom: 0;
 	h4 {
@@ -283,8 +287,8 @@ header {
 	padding: 0;
 
 	li{
+		@extend %drop-shadow-right;
 		background-color: $card-color;
-		border: 2px solid #ccc;
 		margin: 10px;
 		padding: 12px;
 
@@ -373,6 +377,12 @@ header {
 			grid-template-columns: 1fr 1fr;
 			margin-left: 10%;
 			margin-right: 10%;
+
+			li {
+				margin-left: 8px;
+				margin-right: 8px;
+			}
+
 			#restaurant-img{
 				width: 50%;
 			}

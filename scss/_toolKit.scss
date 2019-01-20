@@ -21,3 +21,8 @@
 %inner-drop-shadow{
   box-shadow: inset 0 0 15px $drop-shadow-color;
 }
+
+%card-centering{
+  margin-left: auto;
+  margin-right: auto;
+}
