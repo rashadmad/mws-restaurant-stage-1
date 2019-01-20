@@ -218,11 +218,10 @@ header {
 		margin: 0;
 	}
 	#restaurant-cuisine {
-		@include fontSystem(p_italic,$color:white);
-	  background-color: $neutral-dark;
+		@include fontSystem(p_italic);
+	  background-color: $card-color;
 	  text-align: center;
 		h3 {
-			padding: 20px;
 			margin: 0;
 		}
 	}
@@ -329,7 +328,7 @@ header {
 				font-size: 1em;
 			}
 			td {
-				font-size: .6em;
+				font-size: .7em;
 			}
 		}
 		img {
@@ -379,7 +378,7 @@ header {
 				width: 50%;
 			}
 			.info{
-				height: 110px;
+				height: 115px;
 			}
 	 }
 }

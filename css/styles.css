@@ -239,15 +239,14 @@ header {
   margin: 0; }
 
 #restaurant-container #restaurant-cuisine {
-  color: white !important;
+  color: black !important;
   text-transform: none !important;
   font-family: EB Garamond, serif;
   font-size: 1em;
   line-height: 1.5;
-  background-color: #afafaf;
+  background-color: white;
   text-align: center; }
   #restaurant-container #restaurant-cuisine h3 {
-    padding: 20px;
     margin: 0; }
 
 #restaurant-container table {
@@ -355,7 +354,7 @@ header {
       #restaurant-container table th {
         font-size: 1em; }
       #restaurant-container table td {
-        font-size: .6em; }
+        font-size: .7em; }
     #restaurant-container img {
       grid-column-start: 1;
       grid-column-end: 2;
@@ -392,7 +391,7 @@ header {
     #restaurants-list #restaurant-img {
       width: 50%; }
     #restaurants-list .info {
-      height: 110px; } }
+      height: 115px; } }
 
 @media only screen and (min-width: 800px) {
   #restaurant-container {
