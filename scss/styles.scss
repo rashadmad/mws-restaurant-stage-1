@@ -11,7 +11,7 @@ body,td,th,p{
 }
 body {
 	@include fontSystem(body);
-	background-color: $neutral-light;
+	background-color: $drop-shadow-color;
 	margin: 0;
 	position:relative;
 }
@@ -52,13 +52,12 @@ footer {
 }
 
 /* ====================== Navigation ====================== */
-
 header {
+	@extend %drop-shadow-right;
   position: fixed;
   top: 0;
 	width: 100%;
   z-index: 2000;
-	@extend %drop-shadow-right;
 	nav {
 	  width: 100%;
 	  height: auto;
@@ -215,6 +214,7 @@ header {
 }
 /* ====================== Restaurant hero details ====================== */
 #restaurant-container {
+		background-color: $card-color;
 	#restaurant-name {
 		@include fontSystem(h3,$color:white);
 		background-color: $accent-color;

@@ -34,7 +34,7 @@ body {
   font-family: EB Garamond, serif;
   font-size: 1em;
   line-height: 1.5;
-  background-color: #f3f3f3;
+  background-color: #888888;
   margin: 0;
   position: relative; }
 
@@ -233,64 +233,62 @@ header {
     height: auto; }
 
 /* ====================== Restaurant hero details ====================== */
-#restaurant-container #restaurant-name {
-  color: white !important;
-  text-transform: none !important;
-  font-family: EB Garamond, serif;
-  letter-spacing: 3px;
-  font-size: 1.4em;
-  line-height: 1;
-  background-color: #3572c3;
-  padding: 14px;
-  padding-bottom: 20px;
-  text-align: center;
-  margin: 0; }
-
-#restaurant-container #restaurant-cuisine {
-  color: black !important;
-  text-transform: none !important;
-  font-family: EB Garamond, serif;
-  font-size: 1em;
-  line-height: 1.5;
-  background-color: white;
-  text-align: center; }
-  #restaurant-container #restaurant-cuisine h3 {
-    margin: 5px; }
-
-#restaurant-container table {
-  width: 100%;
-  height: auto; }
-  #restaurant-container table th {
-    color: black !important;
+#restaurant-container {
+  background-color: white; }
+  #restaurant-container #restaurant-name {
+    color: white !important;
     text-transform: none !important;
     font-family: EB Garamond, serif;
     letter-spacing: 3px;
     font-size: 1.4em;
     line-height: 1;
+    background-color: #3572c3;
+    padding: 14px;
+    padding-bottom: 20px;
     text-align: center;
-    letter-spacing: -1px;
-    padding: 15px;
-    margin: 10px;
-    width: 100%; }
-  #restaurant-container table td {
+    margin: 0; }
+  #restaurant-container #restaurant-cuisine {
     color: black !important;
     text-transform: none !important;
     font-family: EB Garamond, serif;
     font-size: 1em;
     line-height: 1.5;
-    font-style: italic;
-    padding: 5px;
-    background-color: #afafaf;
-    width: 250px; }
-
-#restaurant-container img {
-  height: auto;
-  max-width: 100%;
-  min-width: 350px;
-  text-align: center; }
-
-#restaurant-container #address-container {
-  text-algin: center; }
+    background-color: white;
+    text-align: center; }
+    #restaurant-container #restaurant-cuisine h3 {
+      margin: 5px; }
+  #restaurant-container table {
+    width: 100%;
+    height: auto; }
+    #restaurant-container table th {
+      color: black !important;
+      text-transform: none !important;
+      font-family: EB Garamond, serif;
+      letter-spacing: 3px;
+      font-size: 1.4em;
+      line-height: 1;
+      text-align: center;
+      letter-spacing: -1px;
+      padding: 15px;
+      margin: 10px;
+      width: 100%; }
+    #restaurant-container table td {
+      color: black !important;
+      text-transform: none !important;
+      font-family: EB Garamond, serif;
+      font-size: 1em;
+      line-height: 1.5;
+      font-style: italic;
+      padding: 5px;
+      background-color: #afafaf;
+      width: 250px; }
+  #restaurant-container img {
+    height: auto;
+    max-width: 100%;
+    min-width: 350px;
+    text-align: center; }
+  #restaurant-container #address-container {
+    text-algin: center; }
 
 #reviews-container {
   background-color: #afafaf;
