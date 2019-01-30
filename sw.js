@@ -16,7 +16,7 @@ const cacheFiles = [
   '/mws-restaurant-stage-1/img/7.jpg',
   '/mws-restaurant-stage-1/img/8.jpg',
   '/mws-restaurant-stage-1/img/9.jpg',
-  '/img/10.jpg',
+  '/mws-restaurant-stage-1/img/10.jpg',
 ];
 
 
