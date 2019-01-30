@@ -7,7 +7,7 @@ var markers = []
 
 if('serviceWorker' in navigator){
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js')
+    navigator.serviceWorker.register('/mws-restaurant-stage-1/sw.js')
     .catch(function(err) {
       console.error(err);
     });
